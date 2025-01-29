@@ -1,0 +1,902 @@
+{
+    "bk": {
+        "private_key": "0x1370ceeda13936aa033e42058ac0ddf1129ae746db104ca070dd634457ef08da",
+        "address": "0xE88e33A314A5DFE7adaEB4b807815CD28c95073A"
+    },
+    "ElliottBROOD": {
+        "private_key": "0x31afa2ee85143b3ed7b23833a0d70190e00b289390815065138a5fcbf24d0e8d",
+        "address": "0xd236aF6E2a5fc77107c9597059250f4dCF7028E2"
+    },
+    "LazyGrizzly": {
+        "private_key": "0x2c327986aa9eb8706913fb87ad3573faafc2847affc85bbd7a036ddb0d04234d",
+        "address": "0x2663C21338882D9951C51490214DDa74b66593f7"
+    },
+    "Nope": {
+        "private_key": "0xe1528dcc90a42fe9b6c4bac787e92b24796a97b64df9fa7691ba19d5e248a8c4",
+        "address": "0xdEfACCd8c1Ec4236379Af12A9e13d096c76fbef0"
+    },
+    "MAXAMILLIUN": {
+        "private_key": "0xd4c44249e23f231c03f46f22dadd05175fd8cb03f31e1d6787b9c25f5bf286a9",
+        "address": "0xF3E200FA2A027a00686463f1e70f7Fe293c23Cd0"
+    },
+    "Highpingidiot": {
+        "private_key": "0x407f846fcd8836cc81b814da2e5476129dedc56ae52876192e10acd5d57a2b0b",
+        "address": "0xc18E364f3e80C58086Bf98aAAFAA3c130E47DA6E"
+    },
+    "DIAPER": {
+        "private_key": "0x3f6dae5b9972752519888a7e59a160c83cc6b5bf0da1c291500fac957abc8835",
+        "address": "0x59E70C4f94a3eE3BDFde4Dd05C168D5655bED411"
+    },
+    "tanyathehairycircusgirlLLC": {
+        "private_key": "0xe5c38bd60e02514926146f5e33afd26f3f374d92cbfacae4eceee55436d28a17",
+        "address": "0x0063ed24C6d7A20F696F2f4C8Cc47EaB5Dfe3586"
+    },
+    "Mindwrp105": {
+        "private_key": "0xc7f2d5cf1784e0895ee69e08ef79f3d23c643af8c100faac76c75ec750137933",
+        "address": "0xa14C564B7441758B415bb452dAe4EB1a7D325b06"
+    },
+    "loganwaters": {
+        "private_key": "0xdbe2de0a9483e1536f62b2b0199303185413113bd2d5e3579d26a7abba1eaba8",
+        "address": "0xA6f1245BFA33604ABC0d1CD1A8F439b9575D2183"
+    },
+    "JessicasPickle": {
+        "private_key": "0xc7f492c0251e828e6310e21d0daca58d17b15b69eee93bac3aa7774ed66fa007",
+        "address": "0xd9Bc19383D6869B16D8F6162e2df398fBE44F9B1"
+    },
+    "Racer": {
+        "private_key": "0x5398cf3e8a8a2d09efecb6845b8ab005ff2b2b743719d1084f60f1c61dd3f1c8",
+        "address": "0xd4E394BB49D91a067B48E67B06FA98835D70391F"
+    },
+    "Rb": {
+        "private_key": "0xf8bab1e82ec8bd15e63e120d7e7afccc5d83283b4171d8709b9165e3b7bb6874",
+        "address": "0x452a8E8793FFd5371B2FDAa89E9Cb5174D2Fd072"
+    },
+    "Thanoulis": {
+        "private_key": "0x9ec9065722b4a7c4d8b69e640e264e9937d199a841d49d47fbd79896c5883df9",
+        "address": "0x6d369B46C659348523DFE2882c8F23539B7973F5"
+    },
+    "Maximus": {
+        "private_key": "0x673be818d04e5c5a86d4bdee597296c04d49b110ca1e08afd8009e96864242a0",
+        "address": "0xA305dD4FbcE952e2e09CC8DC4aD98DaB20a0A4bD"
+    },
+    "Se7en": {
+        "private_key": "0xb0b6deff2d174c0e3b65fcedc3950b7b9f11547a6a09ec652ac8e5424a276b5e",
+        "address": "0x77226cd1683D598d15BAD3E49be758F28B31c707"
+    },
+    "spratty": {
+        "private_key": "0x6980fb8c5008e8255620f0784ce4815b96781011a92c756dd2ba1633f7eb3012",
+        "address": "0x63073A7F0931DE7e99eEF7F6907805aE33C7639D"
+    },
+    "Leandroide50": {
+        "private_key": "0x417b46c3c3b43da90722462cde739b2c8b82c5e1e5be73e03cf928f0b0f1a273",
+        "address": "0xd4600059e0012702E4f6e57448f3Bc02d344EF59"
+    },
+    "Pock": {
+        "private_key": "0x83d8aef1f3a7ed523bf8cecf713f46692410d45756bdc899b9fbb426d7a9a1ae",
+        "address": "0x09ef5A637165A7140f9840D4d4C716F4B2F00793"
+    },
+    "D2F-HLTV": {
+        "private_key": "0xb9ec5492f16399f0dbbdc2246ccba4319f652ab74fc6fcac2917c1e365a2fc78",
+        "address": "0xD8EAaD8efa108bE6008F9A7709b80e08Fe83C8d5"
+    },
+    "--OsiriS": {
+        "private_key": "0xb93ab8a6b0565cda8e819256f045f313641db98e76c073dc896d0878fdd0467b",
+        "address": "0x39d68722C723E22642A588e00D86C5034E50c569"
+    },
+    "1999TFCdiscordggpfTZzXKEyY": {
+        "private_key": "0x92c171447324b06a4fdb58916c65c7193869e415adb5c6cc43ceb0b33771a1e9",
+        "address": "0xF47Ac486d816a7d6BFA38C3117c2483bb53fC334"
+    },
+    "Patreoncom1999TFC": {
+        "private_key": "0xdb855c5aaf17a8a543d15acfeefb8407702c7f1594bad9606835df15eac19e10",
+        "address": "0x75eEB38bD7347988F340a35BB5ECFD1C6ce61053"
+    },
+    "Hi-CEctoCooler": {
+        "private_key": "0x91de8629c24a2f59eac0707a4c266e21a912dac44d3a2007fc73ac189234ca00",
+        "address": "0x4A49d5115fd2252C84065a36aBe5F3aCB7C071cf"
+    },
+    "myDiscman": {
+        "private_key": "0x4b429ef64acf6b0a2854156c86f74b959dfd2955eec2c0bf1cd8c11413e45b61",
+        "address": "0x48C19D5085F0C10376F55cd56d9E5E127fD8e56B"
+    },
+    "Payphone": {
+        "private_key": "0xd6f9b39325bd4f791aa16378367e95fe766b2d1fba2e629b7b03c1b89de46f5d",
+        "address": "0x516762d200b04027A9cAc8494bA1CF9b512894b7"
+    },
+    "ICQ": {
+        "private_key": "0xafff125a7989516c5fdbef8f581202d22d2b9dbfaadb6e24ee81d21bddc391fe",
+        "address": "0x3040AE788912Ec6A5E8f6865c692DCDc5EaF3a8D"
+    },
+    "BlockBusterVideo": {
+        "private_key": "0xf4ea954f0058f18d9657f6b83c9a173d30666ee06533c6c2140853050c51a7b1",
+        "address": "0xCcC99CD90a3FF58B38AA8FfF3e3734a412E238Df"
+    },
+    "CaptainPlanet": {
+        "private_key": "0x1ac2c51dbbe500738eadedbd3bfa63a66371208fe78e59f041e94bfe4b05809e",
+        "address": "0x132b4B836E7e05382Edd68aF4CA0eb27a4bbFE09"
+    },
+    "DialUp": {
+        "private_key": "0x17a3620872dec34e9a7c44cf94aa545c1f23c971151f913ceccf12af932c7bde",
+        "address": "0x26f164BB8d102231E1E19864F8C17CEd388EcF58"
+    },
+    "Player": {
+        "private_key": "0x36c7d7a6d2ffd028c8162fda3ba85c6eb56dd08caaec9ec8426bbf6369a01ba6",
+        "address": "0x0E95096730F6F72089FA66E1F6c9D8574ed98319"
+    },
+    "GTA2": {
+        "private_key": "0xe709b02d3dffde6c8ac2b01fb53aaca30f2c4c5be7d3784666284145eb0c7070",
+        "address": "0x9bE03A45990481be4FC870e52CE304431B5A69a3"
+    },
+    "hitmypager": {
+        "private_key": "0x975007389d62afb85e400c7efa39ef218501fa20f11d74aa88bf23057e8be249",
+        "address": "0x43EDaa8b16dC550A7763b32852Cd21d3246Ee8FA"
+    },
+    "DannyBoy": {
+        "private_key": "0x5ca982232215454b5ff73c30c462bdc259b689cad639fd844f63d4cf1bc0087d",
+        "address": "0x3C787Ec285C313CDF87F0662b7C100d1666A7223"
+    },
+    "JJW_RepofKorea": {
+        "private_key": "0x0017130b04650b60a8cc2a60b60693f9c74ccec2994ff1d9e5fbf543d7886a6b",
+        "address": "0x4C50154F6A7777Adb51f4d427bC34ecC98d5Cd29"
+    },
+    "Bruno": {
+        "private_key": "0xcb1a8d3f4f553c5284839c4f4413209465c7233cb4bd9bd6010e0c74a863de32",
+        "address": "0xFedDF164e6F55B275303730a70De615785f3594D"
+    },
+    "Phalanx": {
+        "private_key": "0xac208fcb17e1ef777b74073844ee0283407373ab92c2bcd8907982a9f9c4cff9",
+        "address": "0xef5a87290Df76759506506fa5B81bE0E7D20De6c"
+    },
+    "AR": {
+        "private_key": "0xb1108f45303c969e9d7351d399a5934071ea2bfff48255546a9b51a98d3e22aa",
+        "address": "0x85E9B61aBbfB3EdA689bF9751E856F5CDe706e9e"
+    },
+    "RiFFRaFF": {
+        "private_key": "0x7e202dd8bba8a144cf2612c5c0f396b4a8a8179da93cc4e2f9ce113430bc1b9d",
+        "address": "0x5c640703957d54207c531503631a7cb34a52BFf0"
+    },
+    "Jehster": {
+        "private_key": "0x0c41121735bc7746f93101f93806c337ea5986b9dea9deab90a654fd85be4738",
+        "address": "0x5e050F6f23366Af4c030027174b86e02E9060AD2"
+    },
+    "DePo": {
+        "private_key": "0x0df835e3930e89a80998496b6e54ef6675c66f9c9c6350bd07d70ba8eb12d272",
+        "address": "0xE8D65Db7e6Bd3120f67DEA4C037406E55aA5EEC6"
+    },
+    "MighTy": {
+        "private_key": "0x0f0bc8f5cc3763365175334c9c7c835d0fd35326f34869acd35d74a94c9bf3d3",
+        "address": "0xa82d47a56d92EcF5816d1AC2f229a90ab9Da0cb0"
+    },
+    "SheDevil": {
+        "private_key": "0x991da0f3ccb5c57a9ee8352a40bd7b272d062ec703c1c4237ecc31eb40ae521b",
+        "address": "0x3a89583FfEf986b1dd9Ab127E7Ce5074df0F32fC"
+    },
+    "Nimda": {
+        "private_key": "0x9bdceed6930f0d689e4854506a4c86ebe05ed0705a46027648ad8f9b14090a25",
+        "address": "0xCCaae028D061E2345E9e2501Cb7FAFc32d66c984"
+    },
+    "-X-": {
+        "private_key": "0x168bae70b67dab9e78c130d4a834c3e31b1ff524d24866bf3aee9b1c445abb58",
+        "address": "0x99D88A52B244652dD054A9EA19ecc419c2C88aF2"
+    },
+    "Avenger": {
+        "private_key": "0x474192f1f4423a281f0bd69118ce7483c06c7c1bfa1ed5d536eaa425e4e837a8",
+        "address": "0x871adF8890A138E33fd3f02AC8b5ABac7d876766"
+    },
+    "PaRallax": {
+        "private_key": "0x8948c40324fd82678bca95fb45057b0ce96fdd5198bd83f4f9261bd0668566c6",
+        "address": "0x8cCB29AF652938e1F5eBafCa1F8DCa12c39a16a1"
+    },
+    "eve": {
+        "private_key": "0x87de8c262a87d6311031920d738f01c74d94fc88fc7ad48f592f43b26aa4feb6",
+        "address": "0x946d27083d58B18984833c260d2483A6e863b432"
+    },
+    "What": {
+        "private_key": "0x3c57083396e3b36d3c7ccd163662241378f8b6f904f9c122c6315dbf8284ddab",
+        "address": "0x476a31A01393286d790f8BC309E31384117C5BeA"
+    },
+    "SF49ers": {
+        "private_key": "0xf9b3d4999ffd820fbe4364e866121862dbcfbdf524151b8c77085da02c91b75f",
+        "address": "0xccB5b03547B0676a0740489b45b97FD97d36C3Eb"
+    },
+    "Merrick": {
+        "private_key": "0x9962cbd3ceb2e57929dac7dbbc98a3da0407b5e80a385bcb6a094e295489bb0e",
+        "address": "0xA9F75dcd6ddd84D84685c835c97aDF471C617715"
+    },
+    "Henri": {
+        "private_key": "0xfa19b8d66fbaf8ab092f22d695689b53421f7c1c6a4e2a3ec964f1a4efe26ed9",
+        "address": "0xa25F77D36eB0b27A60A58E8550519564C9cd3946"
+    },
+    "Reloaded-HLTV": {
+        "private_key": "0x3e172ddcfc8fbeba53cb27f0081ba910cf82498129aff6c807b913b22099c35f",
+        "address": "0x6a233162aB5D03F42432757052342f3456C9246E"
+    },
+    "Reloaded-Staff": {
+        "private_key": "0xcfebe31a74f9c07c0dd17cdfabd444968c79d2358b35ff905fb03d4d087a5a3f",
+        "address": "0x7C1a0889EbC788872B6a63Af2EE5fB626AE736Ea"
+    },
+    "WayneCampbell": {
+        "private_key": "0x949ee26d7b0fc2060319f3e08693f493a24faa4244e08bd94bd1814a05990fc8",
+        "address": "0xdf1caf332cf2d6cf7E429A3B1D7d3746c6Fb1AB4"
+    },
+    "Luigi": {
+        "private_key": "0x56b0909867d66356842d60cecd6bfe1b8db46f0375d2304b6a9ff4a93bf1f11a",
+        "address": "0xf7832840aDB82abCC10923Bf4Ab41Da4F3dF8F0d"
+    },
+    "56kmodem": {
+        "private_key": "0x42f15c1679284093c963eeda22b752c167fc41a3139dccba5dadfaca9005094c",
+        "address": "0x441EDcd02Aa4CCB6bC7444e498DA783662BE15C2"
+    },
+    "MSNMessenger": {
+        "private_key": "0xe83d21c172cebbff9f2052770d592e53e3b62290311cb8ac5a09ffb237fa169b",
+        "address": "0x052031321f35fcBF9c80656f9746aD391ce7f8C3"
+    },
+    "CarlJohnson": {
+        "private_key": "0x0b8d06059813e3a130fbf87f61e77f3167405a32f8602cc775d5ca5c00716c47",
+        "address": "0xf6A6756B44e338B6b5569fe63a0e80D61EE4D285"
+    },
+    "CrashBandicoot": {
+        "private_key": "0x366211411b55204c9aabc577f8992892a9189647cdb6601283aaf358929ce65d",
+        "address": "0x5A18A616EbD0c76F510C875Be16E3aFd85edA55f"
+    },
+    "DrHannibalLecter": {
+        "private_key": "0x20ae8b35461953071515cf9fd5d07ae404615d0267054def8eb98571cdaf5ee2",
+        "address": "0xeCCDcF9DA59Db233Dc0c43b295271c6accC138eB"
+    },
+    "ArgentinaselLoco": {
+        "private_key": "0xe43590f92490d18aec4e19134de9d3e4dc636ff71cf653766f935415164f6869",
+        "address": "0x935f70e20A4E6D5C1EE9102FA8CcB94Cc9E6ABa4"
+    },
+    "Otaku": {
+        "private_key": "0xaf1b324e411895765e5f8890cc305a1b7c026154dd12a476fef89b9a47da8f3b",
+        "address": "0xf00DEBC73001d0ac795B0b4568AF905Efb342De3"
+    },
+    "Butt-Head": {
+        "private_key": "0xc15b6c6ad353e0a104a9269023500136cc64ef46e9bc694f37b9965335ed7033",
+        "address": "0x96E1b3A435b2B07Ab0Dfb31b60B59C8f7EAcF659"
+    },
+    "GordonFreeman": {
+        "private_key": "0x8eeac3ef79745f3bd68736445434681991a8fde1a88fee06182ea674b933c1ce",
+        "address": "0xF0448FC42046A9c9e083b56DDc4d144ab12645e3"
+    },
+    "NintendoHater": {
+        "private_key": "0xbd8a7d33b61e3a965d13e108d765194c1d842fb8392b798766cfa6c0241bcf30",
+        "address": "0x69C36F623179bf5a0c779a944665e91179C9D762"
+    },
+    "PeteMartell": {
+        "private_key": "0xcf575677caf1b2b5f77654302ff56a90fda25d6af36a24f59e7cdfaefb06c25a",
+        "address": "0xF05E19E0A19B0D985ABd753d37fCeC2D70c676D0"
+    },
+    "JulesWinnfield": {
+        "private_key": "0x254c4b98e16a1aace90fa6f1da3b785219009458b27eb52f5efa7a3237d5d3cc",
+        "address": "0xA626968907914826aFCE02C790aaD887c4C6d5e6"
+    },
+    "RoystonVaseyTV": {
+        "private_key": "0x3a4955a2bbab5e2a102ed8231f11b045b136b40ce04fcebe2925ddcf142cfb30",
+        "address": "0x1AC5E2780F8BFA8C3FCf729116275657c273689a"
+    },
+    "Brian": {
+        "private_key": "0xf5cde2a18cce428b259f728942e329fe5e1f350a95881eeb83d4bc923b771217",
+        "address": "0x38D99554A29Faa04ba28aD56eF74BE63350EA79e"
+    },
+    "Mickey": {
+        "private_key": "0x3550280a1c8823b782df325568253b5cedbd3094c7c5f8771f0d7df251d98bdb",
+        "address": "0xC9a658CE47B88B008287469CA361973CCad20Df8"
+    },
+    "Sexadministration": {
+        "private_key": "0x598c35570b963f3081b2fd2541e01f28dff0ca59477750ad81b9fc541660b71c",
+        "address": "0x8BbdE764D46885FD4E7b5b83c72113DF09fdf13C"
+    },
+    "nelliagif": {
+        "private_key": "0x32df718171650a7d2009065dc0c1678d4da6940758e79ba869b4caf24e1ca483",
+        "address": "0x8862fd09cfA9F4cB11Da6F638C081c8Fad7DCA65"
+    },
+    "notoriousscoundrel": {
+        "private_key": "0xa5252b426066e8a08d07cc94f19d84b35e694550839bb0d73aee552388f58f77",
+        "address": "0x0c383711bEF079169274887c3B2611F617325ADb"
+    },
+    "Tequila": {
+        "private_key": "0xe4663512e805c5f8e9250215ce594a9d91e2aa771172c02b8566d2b4b99132aa",
+        "address": "0x083059d84Eb52f42651Cc6e095D86Bd7530D6F41"
+    },
+    "b3tterDays": {
+        "private_key": "0xf60c385085e4561fc23caa7204466b2a7e422071da6f855d3eb43b5bb2a8acad",
+        "address": "0x30662989802F0aAfD8071bD9410bC5B117340cB6"
+    },
+    "___ThaChef-": {
+        "private_key": "0xfe160ff1f2ac24c749e68437583a9dead952e249c8b8a42e17da2961af4d7d07",
+        "address": "0x6A3Adee2Cd8dc8A7466D0B34170eFc70635f5455"
+    },
+    "SnAkE": {
+        "private_key": "0xfa8ecf3f8b1c3fc5be2bb3723e6902d130907abaff4a9ad9fb5102e8e747e6ef",
+        "address": "0xb767E1Ce2588184aA3A5c661DBF50bC36E6790f2"
+    },
+    "CofCTV": {
+        "private_key": "0x0cf0aef8df6aedeba25c0c2cb3dee101932305ba280929975cfadee2880abbc7",
+        "address": "0x8a1d19BDdF307F344F316D7E489EA830BD0CcD4E"
+    },
+    "BOT_Curtis": {
+        "private_key": "0xee4fd880de11fca4a03f87c38a9a2f4bf3576253a1ce4e71daf8d74019c9470c",
+        "address": "0xB81B3C368DACBB0bb3544E458A659E2c765CEB88"
+    },
+    "BOT_YoMama": {
+        "private_key": "0x60b207cfec86893158755a60e2c014bef55c45a896d30cb9b612154964aad71c",
+        "address": "0x7162Ed9BC315c52fd217e6733657A75B705aA454"
+    },
+    "BOT_Dave": {
+        "private_key": "0xff6e40610dbc0b08c8ac533c52c6c10cb9461b49d4f3291b911e6473e087a9e4",
+        "address": "0xa57332d8eD5E90FeA7c59ef9B1C5b2A979a0130e"
+    },
+    "BOT_TFC_Tactician": {
+        "private_key": "0x892fb2d03e6e82a1f9940fd25e8d85c1a2f999f049e4c2faa2dabeaf3283fd12",
+        "address": "0x2361D3CD8950D9649Dc988deD113b658B2AF0F90"
+    },
+    "InstaFrag": {
+        "private_key": "0x818586c7f921d160d6e5c4cc0f4b553d6b0ee21485afdf28a44f3ed2bc2343ff",
+        "address": "0x4EAF2bE251C9D835BBfEB5B46cF255F7a7a6bd7b"
+    },
+    "PlasmaPhantom": {
+        "private_key": "0xa9ae928baa7e091ce5e08295138e8826ad9fc9906954c949d1c113865128da9b",
+        "address": "0x49CB9D8fC5109f6E58fCE9Bea75b92F0eCb11fef"
+    },
+    "BOT_Spaminator": {
+        "private_key": "0x692eb17067c1eab030de2f21abe60ef2d00f6283e2391071bdf54a593a4d9b26",
+        "address": "0xc24B666Ccd43599de07f64F318f251a25437Aca9"
+    },
+    "BOT_HeadshotHunter": {
+        "private_key": "0xdd5d518b928c842d6252002de21c44996c6d49bbdc51250e64b2640000c7b4b7",
+        "address": "0x0Cf26D9012E912Fe0261A99F811332878360362A"
+    },
+    "StickyFingers": {
+        "private_key": "0x39c34b37959c6b87dbbd53f7785a50c94f43baae19b7a21f0f1fe2a203dba8de",
+        "address": "0xAfcefd942E698315C63d2f4c656DF02582Be715F"
+    },
+    "BOT_Glenn": {
+        "private_key": "0xb62234adf1e10755d02d69e25e54ea2f34a1dbe5b6a95e87036edbea4cf08223",
+        "address": "0x4602951971682496faB11F278a7a142EF3Bc51bA"
+    },
+    "BOT_Barry": {
+        "private_key": "0xf9d1bc363c6e393c66ec09a8d9ba942b212109e5c46d1798a35be7e4bd089941",
+        "address": "0x4BD593d23422629e2523B954328Cc823517f70cE"
+    },
+    "BOT_Sonic": {
+        "private_key": "0xd5a0f631988d336480eaf76c67daf8b1efbee7a7aee94cf4e2b70d1f4128de0c",
+        "address": "0x7B66e2966D7aF85479D6dA0c3Cdeecf79e171283"
+    },
+    "BOT_Kippa": {
+        "private_key": "0x065aefd6131da8235580313d9309d67f28c195ce45c9f40b00e120bf8031e130",
+        "address": "0x73D3f4677cDEe00ee650E11A4f5862EB73458576"
+    },
+    "SpeedyScout": {
+        "private_key": "0xf965e62d23066fb552a29b838b3c1d71cc912518b03ea306ffe7ca82ae644ba2",
+        "address": "0x9E8795c5fce6e9cfcb66c954cfbdC96AFcEF2EA3"
+    },
+    "BOT_DeathDealerX": {
+        "private_key": "0xd0997194436b7b61606d0bf03afb5ec107a9263c12a5f7a555dc95c8a73a7ddc",
+        "address": "0x8AC5a2148F1383350adB0e434cdf62D5e7DC86eE"
+    },
+    "SentryWrecker": {
+        "private_key": "0xb876e9c3e9d4dbf97a8418d20aa69cca4a035c397ab2afbb7875a9d1d1331283",
+        "address": "0x1675923220CC165ACeA19E8Ebba485e163CE5100"
+    },
+    "BOT_ScoutSlayer": {
+        "private_key": "0x126d868da366272198ab86808c3bb11e3ac3099f37a842f63c7119195dce3d19",
+        "address": "0x85B14Bd7203DECB05103643F9c774Fb3cA7DCfCE"
+    },
+    "BOT_Caleb": {
+        "private_key": "0xf916abe2c699aa65369b0d75174372051c56a1c4518f421c204ba2839bc5831b",
+        "address": "0xFa6e59Cce0D1738dAEB3dAC286C82a6315b7989A"
+    },
+    "ClutchMedic": {
+        "private_key": "0xaa33721c45a4e5fa99e3982187e58c98b42f0629d72c1b931a0bc16019434aac",
+        "address": "0x6d7eAa562a83386E4481b58A8Ea34451fc0A6d7b"
+    },
+    "BOT_BlazingPyro": {
+        "private_key": "0x79174acc784a760286786ba8500c9f3a36260e5149f7c5f23db0e651a869824c",
+        "address": "0xEB09bb9A9eE6eBdBe66CdEC80Dc1cddd188473aC"
+    },
+    "BOT_SapperSavant": {
+        "private_key": "0xa218954150dc21732d1bbe8dbefd1e6cfbf2eebd05f136dc3e222644f08178bd",
+        "address": "0xe426E8C9D82f0994F98f001bc8028c515322959E"
+    },
+    "BOT_Spanka": {
+        "private_key": "0x63b9963e088ba03dc062ebf30a827778a72c1ab256b615c401bc8e390dd3c5e7",
+        "address": "0x7835b3A507fFAcE5E39774fEe73979cfB207904E"
+    },
+    "rocketranger": {
+        "private_key": "0x25c52aac3a43073f621f4849e5ec97ce4c7e796f2ed1f4f828f9ce02437efad8",
+        "address": "0x93904FA94735B4b3b0eea3F95106ae61d4704E2a"
+    },
+    "BOT_Katz": {
+        "private_key": "0x4c86aef7efed5b71f624ecc9fb38d98316e35f716cd01a6bea14caeecb556fd8",
+        "address": "0x3952dB3448c2c5361Cea2D8EEB86dC8E99B42ec5"
+    },
+    "BOT_BillGates": {
+        "private_key": "0xaf27747d99c21c0be64b42566332d4a5029ef302b565d8823934f65364ffb908",
+        "address": "0x92896845873Aeb8a8eF8C232b7a3783A88f18538"
+    },
+    "BOT_FragFury": {
+        "private_key": "0x7c920bc6c470c59362632dc9fcdde628cda5b7629accf361ac82770410750085",
+        "address": "0x1fBCd8e6e678A2685B5B6A68c0b16F9ffBdCdF0A"
+    },
+    "S3ntrySlammer": {
+        "private_key": "0xed7eb5ad48167ab65eb1c8ff8836800d17ddf3e069f6b1e10c777f706e65ae2b",
+        "address": "0x1134F286a415f8aF1c9EFa52D36224b738cC5355"
+    },
+    "BOT_SpeedySlayer": {
+        "private_key": "0x31505ab9a5f026ad7dad4fe647700601a6e85d30fc0efa355b5bfca0921d67fd",
+        "address": "0x853280CE50Dae2d2836c93Bf52aB176082350BB9"
+    },
+    "BOT_Steave": {
+        "private_key": "0x6e9b24d47da200bf56a9e1a92795799bdfbe3d5733b6b4f65a4773727a086d5e",
+        "address": "0xA538bA6d506318585c2B13dBbe034F736C56D13a"
+    },
+    "RocketWhisperer": {
+        "private_key": "0xd9bc1a8fb8d00acb09ad901d7c1d14f438a84128a268549f5c2f01e4785d0230",
+        "address": "0xe02de464f985448F7683024487F3C4cf3B2c0556"
+    },
+    "BOT_StunGrenade": {
+        "private_key": "0xd81e10c24cc710181f017b1d0bf3399ec9d0df4ab85c1925a11da19b7318e6aa",
+        "address": "0x78c492F19eb886F5ef54F7054D098b28Da5F7EC7"
+    },
+    "ESN": {
+        "private_key": "0xd712db8a264a79061434c781c709cf419d0317f1970e5ada468230767603f328",
+        "address": "0xFC1289C1BF789A78518108931E7a95Ed45E360D1"
+    },
+    "BenDover": {
+        "private_key": "0x92a5ea1d46a61e4ade64f58409f724bd0d369cb04db131d3c62dc1d3646f1dd4",
+        "address": "0x81D3c6cF443D03bCFf51A0e01600BA48bF30094A"
+    },
+    "DixieNormus": {
+        "private_key": "0xc1a0cbc58084fbd65690baf72e5e2b81921149a4936bccf100845a17c10ae439",
+        "address": "0x2e25545CadE7e3Fef958682E59684b3B9fe8B902"
+    },
+    "OliverCloseoff": {
+        "private_key": "0xcfa11f99f21413eb668b66bfa60bb516ccaf4cab9f4ef89d43f5e0c8757dff8d",
+        "address": "0x5aee370404ed6b2920B22e4806807f4cA3683C56"
+    },
+    "DixonSider": {
+        "private_key": "0x90e04d002002657c46325ad1471cad4c383e2cec819ac8eed0601d456d31938a",
+        "address": "0xe0218Ce4aBA31e31a7D9DD741F95872B4BCc0d4f"
+    },
+    "JackInoff": {
+        "private_key": "0xf72d3148042e277ca9ebc3c47e537b47f70f2be8d7770b42952ed255cd90efd2",
+        "address": "0x9f6314600B6ceb88E24b0481Ba4BaA012C4de64f"
+    },
+    "HughGRection": {
+        "private_key": "0x5cd21313aa4cbedcb5106719099cea58413af71d9af6fec5d386a63ee50bf6f4",
+        "address": "0x1e0Fa8D647B52B6D4d6A97Ed130d1151b1Be539C"
+    },
+    "TVS": {
+        "private_key": "0xb5d34f5a5a1166fc0b7a29114d50763fab89421b558ed9ff370fcf9c25dae803",
+        "address": "0x2DA9845d553F22eDC0F8f78BbF9c2d3433864267"
+    },
+    "M0rph1n3": {
+        "private_key": "0x6461d87669ccbc61716412d20c695b256c6c3b6386f47b8d6739b1179f8b77f3",
+        "address": "0xCf03745808cc726b665979C93f9Ac99CF50E4beb"
+    },
+    "John_McClane": {
+        "private_key": "0x44712e9febb3498f0eb41fee2e542aea8c621e30951983bb36d0e1d1896cdf45",
+        "address": "0xc6507fea78b891Efc66202522353CE2329264350"
+    },
+    "SAS_Commando": {
+        "private_key": "0x17426231bb76ec8cfa08def2ff8007dbb2cc8b3e4176c7e759dfbe2b4f5a25ff",
+        "address": "0xBcE4f6727D3f10365B879a3372917396b49C597b"
+    },
+    "Seven_of_Nine": {
+        "private_key": "0xda1631cf0dca00edd29d13638540b63cd06433290340f5993cbacb4ebbbfa6ca",
+        "address": "0x739f678651bb935A03F8Dd98d1c184b9A93b7975"
+    },
+    "Titan": {
+        "private_key": "0xd2f5fa1ea4264c21fbfcb0b396644b0fd4654db78a3e6c9240a467fcef2a6d46",
+        "address": "0xB571780566Fa2809478F9f98D34Ee6723d792156"
+    },
+    "Spock": {
+        "private_key": "0x8b4bcfb310d101e1dcceb2b0f051d5a4228e0e452adf534dd4bbc8b662d3c484",
+        "address": "0xCFf487B120819a47B2e95fD8D40B64133283aDD4"
+    },
+    "Shania": {
+        "private_key": "0xda54fc7e51ce6060798ba0b86a500b79a17a703687b60437568b8108f987f733",
+        "address": "0x961D1Ce0159ced831907E789D25242ab3EAd2729"
+    },
+    "Shrek": {
+        "private_key": "0xdd788fe9c5f491a0dc1b0f22bfdd28fc72f1c8b019ea5d38977428139ae50dbf",
+        "address": "0x5b936079224d94a83c9795EE1760f4eAC055d054"
+    },
+    "Captain_Picard": {
+        "private_key": "0x85b4f964519ddc18f0466cfc02016d3ae4b9f4dfebad91bf97a5760fb320825c",
+        "address": "0xe6Ca4258f40cA201269831a2428caA5c50862CEC"
+    },
+    "BlinkyBill": {
+        "private_key": "0xbe87b89f7338c7fe1c935f15b0812059cb7f07cf7aaec1006b48eff806a4b4bb",
+        "address": "0x52645c83B46ac0790f4DBcB70b459F51291fc5eA"
+    },
+    "LycosBot": {
+        "private_key": "0xd993d6ca2fe6e9fce2d65962d3558c46f394bf8333f3e3bbd8949d64b1f3ddef",
+        "address": "0x341e01a47d7A2106FB117780d31f1D4F11298121"
+    },
+    "FragThis": {
+        "private_key": "0x8ae02e8764bfe0116a8779ca8a36fc383f26314f976ce457d889386bd837bf4d",
+        "address": "0xE9d1b365Cb9493413ebf836e3587fCBf91E5acFd"
+    },
+    "PurplerMarble": {
+        "private_key": "0xe71a6922704e95fa0558a0500301eb611290a16c46ba8738b9edbcbbb340e44d",
+        "address": "0xc175Ca3C252a7a944D37E849f6694f6758CF6328"
+    },
+    "WillingToDie": {
+        "private_key": "0x11140c2dbca4ce9aed329d014ce3a2606e7ffa853c69ea0d64361f6e9588422d",
+        "address": "0xb148024A14b45d8F42a96AeE76e1d1f268a34852"
+    },
+    "GroundBeefSupreme": {
+        "private_key": "0x6488de3d81284b7175dd234c813a07c8dfebc5da5f27193726884a6998b4a5f3",
+        "address": "0xA4a5597DE51dC7A70c89371a36C8844480Cb7989"
+    },
+    "BYzrBud": {
+        "private_key": "0x6071831476b733a227ab7ce0c2ea9c1121dbf51b4de790d44af3167c5db34ca7",
+        "address": "0xf4cB20C528242e13e884af45267756448004d0Ce"
+    },
+    "WellWench": {
+        "private_key": "0x071236d87c1547560a94e51738a2c526206bb1e92ce022c6e44da28172732435",
+        "address": "0xB24b1D00372abec5C3862A445634DAF3DF446eD7"
+    },
+    "IShootWell": {
+        "private_key": "0x7d31907047cdd265cce77588c2bab4ed9e91e0ecddbbd73cd8e0f7b1c67f6ff9",
+        "address": "0x815a6390F0D5Ac918150b39852c609Ec55f6da07"
+    },
+    "ISwallowedMyGum": {
+        "private_key": "0xd7782ac5afb97edb2c2c871024281dcbc8a672a22ff94fa6c38ceec7bc2845ee",
+        "address": "0xa2DfEBf9B5b0e5B91d04Ca8978207dfD1B266b1E"
+    },
+    "ShoverRobot": {
+        "private_key": "0x3780cd9428f28317619166da64e2d379b1d4f243bcd07734ce3112e0f913115f",
+        "address": "0x611D784192aa98de50B6A31a73401d941EEb4A98"
+    },
+    "TFC4EVER": {
+        "private_key": "0xbe5979bd25378d56c36870294d9a69fa0e352dcc7f53e1c3b6bc52818dfeb579",
+        "address": "0x9D702CDADEbB2ebdDAae4437725e1641E7482049"
+    },
+    "Liquifire": {
+        "private_key": "0xc5dc8a018025a50e26782a8acb78572c37c27df96f432a7c3d4f0d18efa0d904",
+        "address": "0x50339436333629a23e98A376D1e5ba8FCf72bcE8"
+    },
+    "ISeeUrGun": {
+        "private_key": "0x22f18c417b11a511bae0f2042d8ab956101e8e09f758257345a527d821cd2e12",
+        "address": "0x815a3A254b5297a7Ece8b9169D7617849e6911b3"
+    },
+    "SkillzOptional": {
+        "private_key": "0x89940c642655926a2624f2570feb31d4d3aeeae4ac9777771569b31efbdf4bc7",
+        "address": "0x568E077cc79e144C94803e61e65C2D913E8915f9"
+    },
+    "BOTid": {
+        "private_key": "0xb25452bc618a2161b92b32b1b7f7eed5c042b18b0496fecc6533a952b219cd22",
+        "address": "0xfE76A3FeFbbCa58d5eaC75839312edaCE3C04178"
+    },
+    "-GY-SALEM": {
+        "private_key": "0x597476827f2b4afbad32cbc394974451df733261483a531f38c035c0239476d5",
+        "address": "0x97676CD82c9A22c4Ee6b3a29cAC3d6403bacF402"
+    },
+    "-GY-TONY": {
+        "private_key": "0x7dd8e29b3b648afcd8a6c2f531c68b6694e78c38cc07b826ae418b467d321c36",
+        "address": "0x30e8D21A23F73CA6129520A3BdAE6e6806a71640"
+    },
+    "LMFspeed-fire_": {
+        "private_key": "0x80e70d5f975488eeb23f746817e09b1b31d961e230a6c7b7daf14de2811bf397",
+        "address": "0x0430d0B483F405890010223f21723d2D27D0DDc0"
+    },
+    "-GY-KAMISAMA": {
+        "private_key": "0x4f1901d6c088455ce77f6049f88581ccd5c738ed9b7d576aea12d0da3f669bab",
+        "address": "0xebb1263c371A22E2ca2e5A8DF6C8D4399cd391FC"
+    },
+    "LMFDeathofGod": {
+        "private_key": "0x53fd97f800e9a3dc740a210d0cb2b6bc77b42d357094f81a244b3d81f0814221",
+        "address": "0xaE9469F47f26AdDD82dfc5D802C15d53103740Eb"
+    },
+    "LMFT-ReX": {
+        "private_key": "0x0e1ba3e8f96f104627ca9cc27ebfaaf8d66a6c75516111e486b464e09d2e459f",
+        "address": "0xfea408f20BdC7310c43eb1c3b9EDA849485a8715"
+    },
+    "LMFLzy": {
+        "private_key": "0x518e70f0fae2f463a7695b213d4acadb8429a7d57780dea6ab14e735f5074b58",
+        "address": "0x8DD0390a1cf710A1c402aa4C69221Bce22E61126"
+    },
+    "VOMTITANYO": {
+        "private_key": "0x72bf884281af3a309c0eeb1ace06730d074495ae9c837485c257c52bfa6fdcfd",
+        "address": "0xCFb63438b06E8556c357afd2300Dc01e56AF4340"
+    },
+    "VIP-yangguo": {
+        "private_key": "0x49095dc81b3c6df3cf30c4e8def5bc24dfc25ddb08f17725296be11f88153ce1",
+        "address": "0x32f8C592dA493d707af97825895De97c190c614b"
+    },
+    "yuliya": {
+        "private_key": "0xd2a672311adc2dda523a7f9a8cb3966202ae2a00728f789f24c9655385db7b4a",
+        "address": "0x168cdBAa4f187e0402b9461287703bC3fbEEDea3"
+    },
+    "ureX": {
+        "private_key": "0xc59bd455d975524e3f76ba1b55e5bdb4e52fbd76e9a864d4aada5ca0ec8fe61e",
+        "address": "0xc09B363A6e8d60EB2F9AaBb1C29dDf2790EB5E9B"
+    },
+    "HotBoy": {
+        "private_key": "0xe00112b832865c97a597b2e04c0257984de8c4e14dca4c274e844724e2c7f9ac",
+        "address": "0x0c533997B7080b85a878783EDa32Dad595ac38C2"
+    },
+    "stan1a2": {
+        "private_key": "0x1e710452be4b182ba3934e435ec1f0b25eff9b4808e1ef3e0117e06590354b84",
+        "address": "0xAdE95686ae399f1f4941A40aEDa333de35CccdBF"
+    },
+    "unnamed": {
+        "private_key": "0x876124654b9f110f5c4e099698dff316be1bd88a2a0932cb0bccb2ee3a3d673f",
+        "address": "0xefBfc502475DEE2A47d09241850c2f5A907c7668"
+    },
+    "severdserenity": {
+        "private_key": "0x3b96fd5ba51cf6e0a2996dd57290027b5256c6705ba6a9f7a370301520d29322",
+        "address": "0x3311464FbDbE2A1508d7808E658CC640BdeF7F44"
+    },
+    "PaTrIoT": {
+        "private_key": "0xf40efb9b63fedc45f14f3919dc1c33405fd7aae00d51bc51d3ad39d563227423",
+        "address": "0xFeEAc80E90634bAD278281e4AE403272CC99C961"
+    },
+    "dedyl9D": {
+        "private_key": "0x243f79d6225423e6611bbb7bd6b4a0c00fa01b9bbaf74308da8d5405eee0ac3d",
+        "address": "0xF48729E74Ac20cC982f18d3E773d5618Fbb1d5E9"
+    },
+    "Playersjerome": {
+        "private_key": "0xbf079cde241052d1eb5c49e4905cdc22e2aa759cac694cf8d0bb736d7905ea1a",
+        "address": "0x52CeD6A3e10004A0aFa20e7A9Dd462725BB43D1b"
+    },
+    "Exclusive_player": {
+        "private_key": "0x13fa2e7424c8aaa84b58bc1cc12b947ac39e47a1795bcaa2f07faaf155fc4c89",
+        "address": "0x6b8baAC7BE0aB2D1913d5f465cE62d010F807c38"
+    },
+    "MrFloorPie": {
+        "private_key": "0x3179bbb88ef025866e01ff77620da2c31c2807fb0d7740cf476d9649ec5d58cf",
+        "address": "0x43F023B021682E04AB2122398B9E0a2B96B3eA46"
+    },
+    "MrMani": {
+        "private_key": "0xcc094e23b61dcafcc5b95508266ff2c8821f870e0742c52e16db7b480b46440c",
+        "address": "0x509BD9ee7681a5C3ce1AeEcde765b505424eB3d6"
+    },
+    "MrPhalanx": {
+        "private_key": "0x318b2eef716b6abb7aa3b9ab9e3721b0b41963acbfe3b0ff7d4faf07674b930b",
+        "address": "0x6b26fCAb6be81CFE5D780F9616feB4c2efdc89e7"
+    },
+    "MrBruno": {
+        "private_key": "0x7ad6f2f3a3f9c1e4f355267d7dafef3aa32c1a3b41e391ba2718265f33475b48",
+        "address": "0x8fB10F4dc2Fd8b0183e00e87848f3bAc710845a2"
+    },
+    "MrGhey": {
+        "private_key": "0x75fe91dc99c0bd2939f458dcf4bd2f9a4ef74164540baca2853c22d0651dcd5a",
+        "address": "0x7F45EAe067bD05a30722096efD00A04382a91F9D"
+    },
+    "MrOpossum": {
+        "private_key": "0xeb7b27a091ecfab53ecb5a4d1fc922b838c4cdee898b84b90f35e59bfec79335",
+        "address": "0xcB75E06B9a38251Ea96129F7A8da36D503818a13"
+    },
+    "MrThunder": {
+        "private_key": "0xf9c2b70766b25491593ac45b8c99d98004a31c656b76b4efb0dfdf694d11da83",
+        "address": "0xB581Bf2651Ec4A5f9345017310f177191B8595c8"
+    },
+    "MrGiga": {
+        "private_key": "0xfb973a8f558f83b08b4c6f8b704c18514597f45c16c292968734641050425608",
+        "address": "0xade86EEd51ae48A2CeF36077F30C55a4857168A3"
+    },
+    "MrNimda": {
+        "private_key": "0x8b07b1f2bda625fa2b0f6a26a53bd895bc59b9259b75433a97ffdfd64be9c72e",
+        "address": "0xb948ECbb43572aaE813456c633Eb0e8013293c62"
+    },
+    "MrP4r4l4x": {
+        "private_key": "0x13344a26517d57b504f9057d22baee60d6acfa2a158add7d7542b5c6cace07c4",
+        "address": "0xf507Df2f5e2295cdc80Ef67150a11592541aDb70"
+    },
+    "MrWhat": {
+        "private_key": "0xd66fbd0485f30d4fa3b5d5947ca37b8f5aa7996a16836fbf6d82b59ed3f08223",
+        "address": "0xaE7D7014Da29228d46f3f4eBf8bc5beC9d26Ae06"
+    },
+    "MrOrtega": {
+        "private_key": "0xe94d7db42851edeff76cf0735f60a2f713a069a320efbcee6dd0972ac5aecc57",
+        "address": "0xF54f3BF94f7b987A3D326Cb0cfcD7431485A570d"
+    },
+    "MrSwede": {
+        "private_key": "0x8ac852967f7b194568a90b5e37ad2e60fbe1b98809342b4a95a367c7e5c13fe2",
+        "address": "0xe46aa1aAc49BA5E66D562D3c1c87C6AD71A258ae"
+    },
+    "MrTom": {
+        "private_key": "0x4b5cb417000be29d4db67cadf6492f26fd5f98ed952950b08fd0ce9ccb0e1099",
+        "address": "0xef4E4D72c7942147F1F453Fcd99fCCa5e1fD3f8A"
+    },
+    "MrNuggs": {
+        "private_key": "0xbcf0656284dc423fcb20a382dadb27cbb77eaf98d7672b2244f511b451a6345b",
+        "address": "0x53Eff0aCba145F2f502A62B7B8011EE437F01cE5"
+    },
+    "Mr-X-": {
+        "private_key": "0xc3c0f40f457dc6d4070863a2ad2565180d44e1e53dfc10651da38c8d0a768c52",
+        "address": "0xA1ca4AEb0509Ff5C5F5f0ACe4bBA412175004488"
+    },
+    "Brit": {
+        "private_key": "0x677093b8c011a8085efcdb34f4a49ddbc6568be8797ab0d5a656b8d9be583833",
+        "address": "0x86d1AcdF43Dc2b2e7B89B43CaB10C3266EBaA9e8"
+    },
+    "Bizitch": {
+        "private_key": "0x0f67d16cb41ce1871e6b90ca4161cccd2ae9910df150f3251974e14371c56738",
+        "address": "0x763b70CdA796DBF3Fe351665c4cbb6A4e70f80e7"
+    },
+    "YoMama": {
+        "private_key": "0xd4ee6cceae3074ce82c10634206ffb40f1b3b54e84e93a2a9de421015f215b7a",
+        "address": "0xCCFB517359E583635E7D1dc2f9D62AB57b07Dc96"
+    },
+    "PlayaHata": {
+        "private_key": "0x285d5eb361fa72f495bc82f20951865a9c5387677dcd1c8435aeadfc1b32e234",
+        "address": "0x3C9d5860eD59f1CcdCCD6C96EB14C7792B40EbED"
+    },
+    "Spaminator": {
+        "private_key": "0xe562680f80c4f28ad6fe0fb244413226b6dccc3f9257b1f251567b33dd91f750",
+        "address": "0xe83C2F191Fb2e468b0aAb1ef88ac9A0DbA4ed43F"
+    },
+    "Steave": {
+        "private_key": "0x31e8cc92845244c802eb1caadce05626c029ca1696a1d9224abc6602384d5dfc",
+        "address": "0x3821ED5dbEf54A46bF6bA44E38D5eF745F875c66"
+    },
+    "USuck": {
+        "private_key": "0x628e7414115bd3e56fcdd32124ef63a55b634afbbba12a87864bb7450b39cb7d",
+        "address": "0xF911e907ba7F29C23036339e90624B56Ce5EEeC0"
+    },
+    "Dotcom": {
+        "private_key": "0x218478369d04d5737079ea9afd907598ed06102b3d791efea0cfe3898383c305",
+        "address": "0x24b5d2D73483dC768deFa0d475f81ff2484e70BE"
+    },
+    "Cardinal": {
+        "private_key": "0xb67ac2149046a7948e807119f6c15ca0cd7b9dca00a34fccf0b0a4869a101649",
+        "address": "0xB3E6B2dF61b205dd915c79dd637e369264f55267"
+    },
+    "MoFugger": {
+        "private_key": "0x534a5d237ac03b1fd7340a79f87f2d40a6bfa8385721b730871ac5e9831b9048",
+        "address": "0x707EA5Fd16dDB4BAda9fD724900907C1CF56E4d3"
+    },
+    "Cartman": {
+        "private_key": "0xd82339640e4b9c3f175189c4204554428c68251f3498070c57ea529547d90009",
+        "address": "0xc6bd25098249334617E6320ae1486F12133aaeFB"
+    },
+    "Spanner": {
+        "private_key": "0xce95b71a9ffe5651ab51d8b5d44bb3938fa7c429efa40c4f7d0ad35f16c61ec3",
+        "address": "0xa82cC6BB1bF0e738F350766D45E8d3b34eB16dAb"
+    },
+    "--RENEGADE-623-TPF-": {
+        "private_key": "0x49b71d48b971cdddf7f2ca9d4ee65377eeece15c6b962ab59d18c0156fdf4b4f",
+        "address": "0xcCFDE87fEb137bB966Fb7162fF40273bc589Fc89"
+    },
+    "Rambo": {
+        "private_key": "0x8e40da164380392dc3bc09ae69adceb73180d92756f3b4059cba8b397742069b",
+        "address": "0x2539Beb6BF36947F4D28ebF3A973999FBdff36F8"
+    },
+    "RebelKid": {
+        "private_key": "0x417b30bf13e4d52905fc82b02f7a6073fe11a8c5dba9e3abd687b7df2158d034",
+        "address": "0xBC6f069dFeED0Ad46389E18dF6F1FA9cb107C1A6"
+    },
+    "FabulousTalkeR": {
+        "private_key": "0x7183dd45b4f69734a85082f8c2599e08d8a80688c2c52083924543f165f924b5",
+        "address": "0x22EB9eDe0dA0D2bCb10fc16F5829E9CCc7a06013"
+    },
+    "WinME": {
+        "private_key": "0x7e70df3859e1ef71f04caa008572f7228acb9775bc0c6fe725f327c0359424b7",
+        "address": "0x91EF4500713324AF410d8e80687E9a328e9dF384"
+    },
+    "HamandEggs": {
+        "private_key": "0x6546f35d88b01f291e8783daf62c3d6bbc6e2eaf0611438bc9381257bf83f252",
+        "address": "0x03689a22053D078ea1aD260A13a4C4781cF26AC6"
+    },
+    "Grubber": {
+        "private_key": "0x35642f91d58c7ae77d25243d8a646786d1b04e7243a3cf09ef436838b21bb78f",
+        "address": "0xaa0cbC110684Eac1D62710ed3CAb1FDbA0f6a91E"
+    },
+    "AntiHuman": {
+        "private_key": "0xf60568c78133669077e53020c22fef1a9a408a0a6c5383fb64b040eacf845731",
+        "address": "0xd9b4feA823BeA55265bdE659F512b639d0d235C3"
+    },
+    "DeadSurfer": {
+        "private_key": "0x26da55c43de2457c017c75d3125f613d36271f39f1f2f1bfc1f90f12cee252de",
+        "address": "0x163b2bFE2781F954015AD0C06178d4a45F6EF6Ac"
+    },
+    "Caleb": {
+        "private_key": "0x5415b49f3fb1a2ab951ceb1a5864d218d0805de0b4dba006d5a859430e2c07db",
+        "address": "0xa3C345d560afD64576323e395206C7768DF80e0B"
+    },
+    "Lepton": {
+        "private_key": "0x5caad169a105bc96bc30f1c285829dffde3976298741cf5d6b216ee6911f2dce",
+        "address": "0x709c007eBfB053788a001155f2ce2370da1Fe85a"
+    },
+    "Playa": {
+        "private_key": "0x2afc65d93539ad6698c159f91e9c92631e661300cd03621b7c0059a30fc12e30",
+        "address": "0x4707FaC7A13692b189d243784D1Ab12Aee7B3ec0"
+    },
+    "RainMan": {
+        "private_key": "0x0f0c9807a2d71df299e40b6a164e81b1da06bf68809142fcdef1d007b708b1f9",
+        "address": "0x03D076Ef90b3B48518659Ad509c89B6c6FCF8C83"
+    },
+    "Clay": {
+        "private_key": "0xb59a69a0bbe3974701307b91877e7cc8184e9ccac95197c7b8cf5dd8a076bd2f",
+        "address": "0x29e9B15647A11287103b4FaAA67cBc44E20D2708"
+    },
+    "ElLobstero": {
+        "private_key": "0x1eebe0fe15acf1224be68ff1bd1ec0318814b8944cd1afe14bbda56f85d0405f",
+        "address": "0x8C5923AF2b951f31fE1517C79C66656EE1064ED8"
+    },
+    "Albert": {
+        "private_key": "0xf322fe7ffd6c0441553bb95ab3af2be7aa3c09ec249d37b0215cbb98513d947e",
+        "address": "0xE94382d9Ffc9AA42a16432153C6d5bAe01ca260B"
+    },
+    "Glenis": {
+        "private_key": "0xf4c31fa7e3cb948130a47e3b8e8461a2a460eba3467886e783829fa4ad39b94d",
+        "address": "0xfE035aD5808CF4b57cC43B6612E69eBc0cC79126"
+    },
+    "Incredible_Gassy": {
+        "private_key": "0xd1de719369f1588b8da15a8fca4cd920335e9bc01389b2f9a8422fa796132ce8",
+        "address": "0xBD7d34B717fDF8a19D41eD3181Df8d15648537d8"
+    },
+    "EverySinglePowerRanger": {
+        "private_key": "0xf0b3704c3f0100d0f09231169439fc044ba3c5f2d33cb08102b47fa2225bd8f3",
+        "address": "0xDE2A128aB2Df2b543f631143Ed33eA9d850ED1b7"
+    },
+    "Weaselcake": {
+        "private_key": "0x13efa77b0e52c62584415d38c0d0d63d31666daeb1703ecf20d15f7cfab0f866",
+        "address": "0x764e51C53aef8D4231456815992F04FF2aB30953"
+    },
+    "NapoleonDynamo": {
+        "private_key": "0x438b79110e2f01839280db86cfb7343da2e6e8c87fac3c12f245656894902996",
+        "address": "0x9165bDE6b30c7C7aFe7EDa8E14bfC07293cdA8ed"
+    },
+    "Scrimblo_Bimblo": {
+        "private_key": "0x7e1fb753cd2ec5858ec05662d2738fca80d2f9e2ec1a35e543f040c6ed661157",
+        "address": "0xEDd786868F09e8d6b06298aFF365E5d1DED43672"
+    },
+    "Grayson_Jant": {
+        "private_key": "0x934074f9be04558e50b23aa1b70511f516068a614bad6ba04538e1f07e0e8a4c",
+        "address": "0xC10FF6C49a0277f1deC1c4Ff183dDA3Fe0751007"
+    },
+    "Mahora": {
+        "private_key": "0xe71e9270a266655c950ebdaa708d250712ea684fd9ebea46b64faa9bf1c3c0d2",
+        "address": "0x753235a478D1317eAA33B29412287fa13E7E25Ef"
+    },
+    "Glorified_Toaster_With_Leg": {
+        "private_key": "0x2d5415806b809cac378141947d3fc2c8f396bf7dc611a95e329f90be03ffdf09",
+        "address": "0xE3D3391C125f91ABc2dcAA826C80D4741D5e8C6f"
+    },
+    "Medic": {
+        "private_key": "0x4ac7ddedfa06fdfad2427686b09e4a6b4e3fca80f02a255ba3b9f7f23dfd6558",
+        "address": "0x80884F21946B602152355Cc3947Bb989619e3706"
+    },
+    "Paratrooper": {
+        "private_key": "0xf6186e77c9b2b36ab13ae8d4f1febff71349f3401ccb5fa6d9f7aefc332d6fc1",
+        "address": "0x1676fa4D90c1185968e8B09bd618ABb2940c471d"
+    },
+    "Captain": {
+        "private_key": "0xd3e1f5e683163decc7fb89c41f5c197324a083e8985db1be5fe4550c41c188c4",
+        "address": "0x9734809AB9348E254c352596369fCff6ECD2E3c5"
+    },
+    "Artillaryman": {
+        "private_key": "0xa872db25351c8ab316af8d2f0504d4530fe5ab7a9ecd74673354cc3e5d9088bf",
+        "address": "0xF2857555Aee9Bc8542eea48EB1419953B1a219e6"
+    },
+    "Skuttlebot": {
+        "private_key": "0x86f374986b9a63666d9dda6ee2cf4a4ffe910562157c968e6541881f04db5747",
+        "address": "0xa54F56a2a11e214b943774EFB813e627685177d4"
+    },
+    "TFPugsWESTHLTV": {
+        "private_key": "0xe92c0a0d8c106c3d69f44107c2d1ad5b30ca4baceda3ddd311c5e39f2480ea13",
+        "address": "0x64B1201Bf85db6952Bf7513f689F971FBfC77a43"
+    },
+    "TFPugsSOUTHEASTHLTV": {
+        "private_key": "0xe08a34c5252b9b7d626a733ada5a03085c97326cebf6de00a7f87d3ec9c2ecda",
+        "address": "0x779885FF89B4e00962B4E50AE8f0733D197bAEFe"
+    },
+    "Sandrito": {
+        "private_key": "0x28d8750a671cad35139be6551819485860440f7177580ed4157bca5b02885de2",
+        "address": "0x99f2CFEEDd76f370F4fc881e0764b3AdE30D83B7"
+    },
+    "TFPugsEASTNYCHLTV": {
+        "private_key": "0x093b0eca7b985146fa016889bf18450d22dc92b5f17964857eb2ec07b639c9c1",
+        "address": "0x393c294746941FB413B38630f366732A3E9b7B9B"
+    },
+    "TFPugsEASTHLTV": {
+        "private_key": "0xe0b80ea55820a2f18e2fcea9e6a1b8cb303cb878966e1565f3095603f51f4982",
+        "address": "0x544A3b11dE9a8Ae23B73701675e3363a8c5a0466"
+    }
+}
