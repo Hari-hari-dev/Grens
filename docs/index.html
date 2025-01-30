@@ -23,8 +23,8 @@
   <!-- 3) Confirm Name (Name->Address) -->
   <button id="checkNameButton">Confirm Name</button>
 
-  <!-- 4) Check My Address => Address->Name (using userAddress) -->
-  <button id="checkMyAddressButton">Check My Address</button>
+  <!-- 4) Check Registered Name => Address->Name (using userAddress) -->
+  <button id="checkRegisteredNameButton">Check Registered Name</button>
 
   <p id="onboardStatus"></p>
 
@@ -38,7 +38,7 @@
     /************************************************************
      *  Contract Addresses / ABIs
      ************************************************************/
-    const DAPP_CONTRACT_ADDRESS = "0xAFAc160AcdeFA6D2006F31ABC497c4c338b6e2Da";
+    const DAPP_CONTRACT_ADDRESS = "0x7287991988B0D3DAc396474463a027E97F660EB0";
     // The contract has these functions:
     const DAPP_CONTRACT_ABI = [
       "function onboardPlayerGated(string calldata _playerName) external",
@@ -47,7 +47,7 @@
     ];
 
     // The ERC20 "Grens" token contract
-    const GRENS_CONTRACT_ADDRESS = "0x10C46DC3af4CA8D3b96978D7D84b5F9d5d1a57ad";
+    const GRENS_CONTRACT_ADDRESS = "0xe92E673C9a775e7E04C0f09880453f430da0F495";
     // Standard ERC20 ABI subset for balanceOf & decimals
     const GRENS_CONTRACT_ABI = [
       "function balanceOf(address owner) view returns (uint256)",
@@ -67,15 +67,15 @@
      *  On page load, set up button event listeners
      ************************************************************/
     window.addEventListener('load', function () {
-      document.getElementById('connectButton').onclick        = connectWallet;
-      document.getElementById('onboardButton').onclick        = onboardPlayer;
-      document.getElementById('checkNameButton').onclick      = checkName;
-      document.getElementById('checkMyAddressButton').onclick = checkMyAddress;
-      document.getElementById('refreshBalanceButton').onclick = refreshBalance;
+      document.getElementById('connectButton').onclick            = connectWallet;
+      document.getElementById('onboardButton').onclick            = onboardPlayer;
+      document.getElementById('checkNameButton').onclick          = checkName;
+      document.getElementById('checkRegisteredNameButton').onclick = checkRegisteredName;
+      document.getElementById('refreshBalanceButton').onclick     = refreshBalance;
     });
 
     /************************************************************
-     *  (A) pickMetaMaskProvider => ensure we use MetaMask only
+     *  (A) pickMetaMaskProvider => ensure we only use MetaMask
      ************************************************************/
     async function pickMetaMaskProvider() {
       // If no EVM provider at all:
@@ -159,7 +159,7 @@
         let tx = await dappContract.onboardPlayerGated(playerName);
         statusEl.textContent = "Waiting for confirmation (tx: " + tx.hash + ")...";
         let receipt = await tx.wait();  // Wait for block confirmation
-        statusEl.textContent = "Success! Player onboarded. (block: " + receipt.blockNumber + ")";
+        statusEl.textContent = `Success! Player onboarded. (block: ${receipt.blockNumber})`;
 
         // Optionally refresh balance
         await refreshBalance();
@@ -204,17 +204,21 @@
     }
 
     /************************************************************
-     *  2.6) checkMyAddress => Address -> Name
-     *       uses userAddress from the signer
+     *  2.6) checkRegisteredName => uses userAddress -> getNameByAddress
      ************************************************************/
-    async function checkMyAddress() {
-      if (!dappContract || !userAddress) {
+    async function checkRegisteredName() {
+      const statusEl = document.getElementById('onboardStatus');
+      // Must have a connected wallet & dappContract
+      if (!userAddress) {
+        statusEl.textContent = "Wallet not connected.";
+        return;
+      }
+      if (!dappContract) {
         alert("Please connect your wallet first.");
         return;
       }
 
-      const statusEl = document.getElementById('onboardStatus');
-      statusEl.textContent = "Checking your address...";
+      statusEl.textContent = "Checking your registered name...";
 
       try {
         const storedName = await dappContract.getNameByAddress(userAddress);
@@ -224,7 +228,7 @@
           statusEl.textContent = `Your address => name is "${storedName}".`;
         }
       } catch (err) {
-        console.error("checkMyAddress error =>", err);
+        console.error("checkRegisteredName error =>", err);
         handleContractError(err, "onboardStatus");
       }
     }
