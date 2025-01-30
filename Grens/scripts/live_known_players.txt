@@ -1,39 +1,62 @@
 Server 172.93.101.194:27015:
-
-Rb
-____rOOsTeR___cOcKbUrN____
-ChromeDome
-BootyEaterIBEW_11
---RENEGADE-623-TPF-
-Frost
-KritSanity
-Statix
-LG-5150
-Fite
-BBLACK6
-Thrillhouse
-JaYNasH
-m00Timetravler
+-X-
+Rockhopper
+FD
+Headgirl
+Mindwrp105
+puppy
+Mashadar
+GIL
+tanyathehairycircusgirlLLC
+Wun
+Picdogg
+beardogg
+Toast
+le_couch
+RedEye
+TheBigDawg
+MrBigglesworth
+yellowawesomeness
+Duffle
+Fred
+Bruno
+Player100
+player
+javito
+lukemusicAKAAkira
+legopowa
 D2F-HLTV
 
 Server 63.143.56.124:27015:
 1999TFCdiscordggpfTZzXKEyY
+--OsiriS
+Mummerick
+-Kt-KingOfPests--
+ThunderXtaTic0w0
+SnAkE
+_real_luigi
+Scorpion
+dub
+FightingFi
+dootyblaster_II
+ElliottBROOD
+creature
+Plushgamer500
+redux
+brocth
+Nin
+JaYNasH
 Patreoncom1999TFC
-Hi-CEctoCooler
-myDiscman
-Payphone
-ICQ
-BlockBusterVideo
-CaptainPlanet
-DialUp
-Player
-GTA2
-hitmypager
-AIM
-Jarulesux
 
 Server 172.233.224.83:27015:
-Cleaner
+snuffly
+BeachBabeRae
+DannyBoy
+OlderthanDirt
+barry
+Amused
+RiFFRaFF-OB-
+SimonTheLikeable
 Bruno
 Phalanx
 AR
@@ -53,29 +76,29 @@ Merrick
 
 Server 116.202.113.50:27115:
 Henri
+Gene14
+DJ-20
 
 Server 64.31.28.179:27015:
 Reloaded-HLTV
 Reloaded-Staff
-WayneCampbell
-Luigi
-56kmodem
-MSNMessenger
-CarlJohnson
-CrashBandicoot
-DrHannibalLecter
-ArgentinaselLoco
-Otaku
+TlNY
+JohnRomero
+JamesBond
+jarjarbinks
+BigSmoke
+StarWarskid
+tfcreloadedhater
+CaptainPicard
+SegataSanshiro
 Butt-Head
-GordonFreeman
-NintendoHater
-PeteMartell
+TommyVercetti
 JulesWinnfield
+JCDenton
+goombafromthe93MarioMovie
 
 Server 51.195.252.162:27015:
 RoystonVaseyTV
-Brian
-Mickey
 
 Server 92.119.129.204:27016:
 Sexadministration
@@ -84,50 +107,47 @@ Tequila
 notoriousscoundrel
 
 Server 98.210.109.153:27015:
-SnAkE
-b3tterDays
---FlaRe
 CofCTV
 
 Server 4.185.106.208:27015:
-BOT_BoomBoomBoom
-BOT_Gordon
-BOT_StickyMines
+ElFizzy0M
+BOT_Bizitch
+InstaFrag
 BOT_AOL
-BOT_TacticalTerror
-BOT_Cheese
-BOT_Spanka
-BOT_TheDevil
-DemomanDevious
-BOT_Spama
-BOT_StickyKing
-BOT_Kippa
-BOT_Grubber
-BOT_SuperSapper
-BOT_Katz
-BOT_LiLPimP
-BOT_Ian
-StealthSapper
-BOT_RagingRocket
-BOT_TheDefender
-CriticalHit
-FlagSnatcher
+BOT_Carly
+DoubleDamage
+ScoutSniper
+BOT_Spanner
+pyroPower
 ClutchMedic
-BOT_FragFury
-BOT_Caleb
-BOT_RainMan
-BOT_Cardinal
-BOT_Brit
 BOT_MoFugger
-BOT_AntiHuman
-BOT_FlagFlare
+QuickFixer
+headshot_hero
+BOT_Kenny
+BOT_SniperElite
+fragmachine
+BarrelRoller
+BOT_Earp
+BOT_SuperSapper
+C4Crazed
+BOT_Alfonzo
+BOT_BulletBarrage
+BOT_RocketRogue
+EngineerElite
+BOT_MadMedic
+BOT_Timmy
+rocketranger
+CriticalHit
+BOT_BoomBoomBoom
+BOT_BigDaddy
+BOT_Stimpy
 
 Server 74.91.114.206:27015:
 ESN
 BenDover
 DixieNormus
 OliverCloseoff
-DixonSider
+HarryCox
 JackInoff
 HughGRection
 
@@ -142,10 +162,11 @@ Spock
 Shania
 Shrek
 Captain_Picard
-BlinkyBill
-LycosBot
+Yuri
+HeadShot
 
 Server 74.63.236.204:27025:
+blue
 FragThis
 PurplerMarble
 WillingToDie
@@ -158,15 +179,14 @@ ShoverRobot
 TFC4EVER
 Liquifire
 ISeeUrGun
-SkillzOptional
-BOTid
+KentBHoppe
 
 Server 66.151.244.170:27015:
 ESN
 BenDover
 DixieNormus
 OliverCloseoff
-DixonSider
+HarryCox
 JackInoff
 HughGRection
 
@@ -177,28 +197,31 @@ LMFspeed-fire_
 -GY-KAMISAMA
 LMFDeathofGod
 LMFT-ReX
-LMFLzy
-LMFHWC
-LMFProtoss
--GY-MatsuTakako
--GY-Seliv
-LMFBueBueMn
--GY-CHAO
--GY-Madcat
--SGL-Tatin
-LMFPenny
-LMFT
--GY-DontkillmelaQ_Q
+LMFHunterKiller
 LMF87CT
-LMFSIN
+LMFJK
+-GY-Seliv
+LMFPenny
+LMFLzy
+LMFProtoss
+-GY-COVI
+-GY-Mooneyes
+-GY-2099AC
+-GY-MatsuTakako
+-GY-flower
+LMFH
+LMFDYNASTY
 
 Server 192.169.85.163:27015:
-Goldyspotofgold
-RENEGADE-623sTurncoat
-MuddysMudButt
+MrWalnutsTinyNut
+Cont486sGAYtendencies
+Resdogscat
+HarleysFlagPirate
+IggysLiberalASS
 FredsStinkyVegetables
-MintberrysRaspberries
-ParkRangersTeddyBear
+
+Server 90.110.222.80:27016:
+HLTV-discordgggTxXDuGGTg
 
 Server 89.36.216.8:27017:
 VIP-yangguo
@@ -208,11 +231,11 @@ ureX
 HotBoy
 stan1a2
 unnamed
-severdserenity
-PaTrIoT
-dedyl9D
-Playersjerome
-Exclusive_player
+HeroIN
+EmanuelMendesPlay
+SHOOT
+Robak
+PunchDreiko
 
 Server 72.133.96.85:27018:
 MrFloorPie
@@ -249,40 +272,49 @@ Cartman
 Spanner
 
 Server 192.169.81.179:27015:
+JohnWick
 Cyberjoker
+Sylvester
+Scotty
+Oleum
+Bishop
+Kangaka
+Rambo
+CyberCop
+Dex
 
 Server 121.99.240.213:27018:
-RebelKid
-FabulousTalkeR
-WinME
-AOL
-Chickenlegs
-DeadSurfer
-Brit
-Caleb
-RainMan
-ElLobstero
-Albert
-BigDaddy
+HamandEggs
+Kippa
+Martin
+Hammer
+TheDevil
+Glenis
 Dave
-geniousatwork
-Timmy
+Chickenlegs
+Steave
+Sonic
+Grubber
+Ted
+Lepton
+LiLPimP
+SPACEY
 
 Server 97.94.129.234:34531:
-Incredible_Gassy
-EverySinglePowerRanger
-Weaselcake
-NapoleonDynamo
-Scrimblo_Bimblo
-Grayson_Jant
-Mahora
-Glorified_Toaster_With_Leg
+Fred_Fuckstone
+FACE_FUCKER_9000
+Ranjer
+Jason_Grant
+Granny_Gumjob
+TubGuy
+Colorjak
+NickTen
 
 Server 74.91.122.11:27015:
-Medic
-Paratrooper
-Captain
-Artillaryman
+Joe
+General
+NCO
+Colonel
 
 Server 45.32.207.158:27015:
 Skuttlebot
@@ -292,10 +324,17 @@ Server 54.153.40.112:27015:
 TFPugsWESTHLTV
 
 Server 45.77.162.42:27015:
+SkE
+Player
+wilco
+IIIIIIIIIIIIIIIIIIIHHHHHHHHHH
+LEVEL1TFCGOD
+BCsmile
+Moreno
+Dospac
 TFPugsSOUTHEASTHLTV
 
 Server 104.207.129.123:27015:
-Sandrito
 TFPugsEASTNYCHLTV
 
 Server 34.206.24.63:27015:

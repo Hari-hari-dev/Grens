@@ -38,7 +38,7 @@
 
     // The ERC20 "Grens" token contract
     const GRENS_CONTRACT_ADDRESS = "0x31e4f69cb2045314D9f9cD1cBA1A2137cB258dE3";
-    // Standard ERC20 ABI subset for balanceOf & decimals (if needed)
+    // Standard ERC20 ABI subset for balanceOf & decimals
     const GRENS_CONTRACT_ABI = [
       "function balanceOf(address owner) view returns (uint256)",
       "function decimals() view returns (uint8)"
@@ -170,15 +170,21 @@
         return;
       }
       try {
+        // 1) fetch raw balance
         let balanceBN = await grensContract.balanceOf(userAddress);
-        // If decimals needed, do:
-        // let decimals = await grensContract.decimals();
-        // let balanceStr = ethers.utils.formatUnits(balanceBN, decimals);
-        let balanceStr = balanceBN.toString(); // raw integer if ignoring decimals
-        document.getElementById('balanceDisplay').textContent = balanceStr + " GRENS";
+
+        // 2) fetch decimals from the contract
+        let decimals = await grensContract.decimals();
+
+        // 3) convert raw balance to a decimal string
+        let balanceStr = ethers.utils.formatUnits(balanceBN, decimals);
+
+        document.getElementById('balanceDisplay').textContent =
+          balanceStr + " GRENS";
       } catch (err) {
         console.error(err);
-        document.getElementById('balanceDisplay').textContent = "Error fetching balance: " + (err.message || err);
+        document.getElementById('balanceDisplay').textContent =
+          "Error fetching balance: " + (err.message || err);
       }
     }
   </script>
