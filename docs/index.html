@@ -30,7 +30,6 @@
     /************************************************************
      *  Contract Addresses / ABIs
      ************************************************************/
-    // The main DApp contract that has onboardPlayerGated()
     const DAPP_CONTRACT_ADDRESS = "0xBd886d5E326d101Da3035E49F78c83d80dfFB4b2";
     // Minimal ABI for your function:
     const DAPP_CONTRACT_ABI = [
@@ -65,37 +64,69 @@
       connectButton.onclick = connectWallet;
       onboardButton.onclick = onboardPlayer;
       refreshButton.onclick = refreshBalance;
-
-      // If metamask is already connected, you could auto-run connectWallet() 
-      // or just let user click.
     });
 
     /************************************************************
-     *  1) Connect to MetaMask
+     *  (A) pickMetaMaskProvider => ensure we use MetaMask only
+     ************************************************************/
+    async function pickMetaMaskProvider() {
+      // If no EVM provider at all:
+      if (!window.ethereum) {
+        return null;
+      }
+
+      // If multiple providers exist:
+      if (window.ethereum.providers?.length) {
+        // find the one with isMetaMask
+        const metaMask = window.ethereum.providers.find((p) => p.isMetaMask);
+        if (metaMask) return metaMask;
+      }
+
+      // If there's only one provider or no .providers array, check if it's MetaMask
+      if (window.ethereum.isMetaMask) {
+        return window.ethereum;
+      }
+
+      // Otherwise, no metamask
+      return null;
+    }
+
+    /************************************************************
+     *  1) Connect to MetaMask only
      ************************************************************/
     async function connectWallet() {
-      if (window.ethereum) {
-        try {
-          await window.ethereum.request({ method: 'eth_requestAccounts' });
-          provider = new ethers.providers.Web3Provider(window.ethereum);
-          signer = provider.getSigner();
-          userAddress = await signer.getAddress();
+      if (!window.ethereum) {
+        alert("No EVM provider found. Please install MetaMask.");
+        return;
+      }
 
-          document.getElementById('walletStatus').textContent =
-            "Connected as " + userAddress;
-
-          // Initialize contract instances
-          dappContract = new ethers.Contract(DAPP_CONTRACT_ADDRESS, DAPP_CONTRACT_ABI, signer);
-          grensContract = new ethers.Contract(GRENS_CONTRACT_ADDRESS, GRENS_CONTRACT_ABI, provider);
-
-          // Optionally display initial balance
-          await refreshBalance();
-        } catch (err) {
-          console.error(err);
-          document.getElementById('walletStatus').textContent = "Connection failed.";
+      try {
+        const metaMaskProvider = await pickMetaMaskProvider();
+        if (!metaMaskProvider) {
+          alert("MetaMask not found or Phantom is overriding. Please disable Phantom or ensure isMetaMask is present.");
+          return;
         }
-      } else {
-        alert("MetaMask not detected. Please install it or use a dApp browser.");
+
+        // Request accounts from the chosen MetaMask provider
+        await metaMaskProvider.request({ method: 'eth_requestAccounts' });
+
+        // Wrap in Ethers.js
+        provider = new ethers.providers.Web3Provider(metaMaskProvider);
+        signer = provider.getSigner();
+        userAddress = await signer.getAddress();
+
+        document.getElementById('walletStatus').textContent =
+          "Connected as " + userAddress;
+
+        // Initialize contract instances
+        dappContract = new ethers.Contract(DAPP_CONTRACT_ADDRESS, DAPP_CONTRACT_ABI, signer);
+        grensContract = new ethers.Contract(GRENS_CONTRACT_ADDRESS, GRENS_CONTRACT_ABI, provider);
+
+        // Optionally display initial balance
+        await refreshBalance();
+      } catch (err) {
+        console.error(err);
+        document.getElementById('walletStatus').textContent = "Connection failed: " + (err.message || err);
       }
     }
 
@@ -122,11 +153,11 @@
         let receipt = await tx.wait();  // Wait for block confirmation
         statusEl.textContent = "Success! Player onboarded. (block: " + receipt.blockNumber + ")";
 
-        // Optionally refresh balance after onboard
+        // Optionally refresh balance
         await refreshBalance();
       } catch (err) {
         console.error(err);
-        statusEl.textContent = "Error: " + err.message;
+        statusEl.textContent = "Error: " + (err.message || err);
       }
     }
 
@@ -140,14 +171,14 @@
       }
       try {
         let balanceBN = await grensContract.balanceOf(userAddress);
-        // If you need decimals, uncomment this:
+        // If decimals needed, do:
         // let decimals = await grensContract.decimals();
         // let balanceStr = ethers.utils.formatUnits(balanceBN, decimals);
-        let balanceStr = balanceBN.toString(); // raw integer if not using decimals
+        let balanceStr = balanceBN.toString(); // raw integer if ignoring decimals
         document.getElementById('balanceDisplay').textContent = balanceStr + " GRENS";
       } catch (err) {
         console.error(err);
-        document.getElementById('balanceDisplay').textContent = "Error fetching balance.";
+        document.getElementById('balanceDisplay').textContent = "Error fetching balance: " + (err.message || err);
       }
     }
   </script>
