@@ -168,33 +168,28 @@ contract TFCWageDapp {
         emit PlayerOnboarded(msg.sender, _playerName);
     }
 
-    /**
-     * @dev If the owner or a validator wants to forcibly onboard an address,
-     *      ignoring the gating requirement. 
-     */
-    function debugOnboard(address _gatingAddress, string calldata _playerName) external onlyOwner {
-        require(_gatingAddress != address(0),               "Zero address");
-        require(bytes(_playerName).length > 0,              "Empty name");
-        require(!players[_gatingAddress].exists,            "Address already onboarded");
-        require(nameToAddress[_playerName] == address(0),   "Name already in use");
+    // /**
+    //  * @dev If the owner or a validator wants to forcibly onboard an address,
+    //  *      ignoring the gating requirement. 
+    //  */
+    // function debugOnboard(address _gatingAddress, string calldata _playerName) external onlyOwner {
+    //     require(_gatingAddress != address(0),               "Zero address");
+    //     require(bytes(_playerName).length > 0,              "Empty name");
+    //     require(!players[_gatingAddress].exists,            "Address already onboarded");
+    //     require(nameToAddress[_playerName] == address(0),   "Name already in use");
 
-        players[_gatingAddress] = Player({
-            gatingAddress: _gatingAddress,
-            playerName:    _playerName,
-            lastMintTime:  block.timestamp,
-            exists:        true
-        });
+    //     players[_gatingAddress] = Player({
+    //         gatingAddress: _gatingAddress,
+    //         playerName:    _playerName,
+    //         lastMintTime:  block.timestamp,
+    //         exists:        true
+    //     });
 
-        nameToAddress[_playerName] = _gatingAddress;
-        allPlayerNames.push(_playerName);
+    //     nameToAddress[_playerName] = _gatingAddress;
+    //     allPlayerNames.push(_playerName);
 
-        emit PlayerOnboarded(_gatingAddress, _playerName);
-    }
-
-    /**
-     * @dev "Soft-delete" a player. We do NOT remove the name from `nameToAddress`,
-     *      because the name is "permanent." This function simply sets `exists = false`.
-     */
+    //     emit PlayerOnboarded(_gatingAddress, _playerName);
+    // }
 
     // ----------------------------------------------------------------------
     // Bulk Minting Logic
@@ -221,7 +216,6 @@ contract TFCWageDapp {
             }
 
             // 2.1 Check gateway validity
-            // If `gatewayVerifier.verifyToken()` is false => skip
             if (!gatewayVerifier.verifyToken(gatingAddr, gatekeeperNetwork)) {
                 // Not a valid gating address => skip
                 continue;
@@ -281,8 +275,8 @@ contract TFCWageDapp {
     }
 
     // --------------------------------------------------------------------
-    // Name Iteration
-    // ----------------------------------------------------------------------
+    // Name/Address Data
+    // --------------------------------------------------------------------
 
     /**
      * @notice Because all names are permanent, `allPlayerNames` will hold every
@@ -300,9 +294,6 @@ contract TFCWageDapp {
         return allPlayerNames[index];
     }
 
-    /**
-     * @dev Example pagination
-     */
     function getPlayerNamesPaginated(uint256 start, uint256 count)
         external
         view
@@ -324,28 +315,23 @@ contract TFCWageDapp {
         return (names, end);
     }
 
-    // ----------------------------------------------------------------------
-    // Lookups
-    // ----------------------------------------------------------------------
-
     /**
-     * @notice If you want to see which address claimed a name,
-     *         This never resets to `address(0)` once set.
+     * @dev Name->Address lookup. This never resets to address(0) once set.
      */
     function getAddressByName(string calldata _playerName) external view returns (address) {
         return nameToAddress[_playerName];
     }
 
     /**
-     * @notice Returns the player's stored info by gating address.
-     *         If `exists` is false, they've been "soft deleted."
+     * @dev Address->Name lookup. Returns a player's name if .exists = true,
+     *      or an empty string if no player or they've been deleted.
      */
-    // function getPlayerInfo(address _gatingAddress)
-    //     external
-    //     view
-    //     returns (string memory playerName, uint256 lastMintTime, bool exists)
-    // {
-    //     Player memory p = players[_gatingAddress];
-    //     return (p.playerName, p.lastMintTime, p.exists);
-    // }
+    function getNameByAddress(address addr) external view returns (string memory) {
+        Player storage p = players[addr];
+        if (!p.exists) {
+            // Either not onboarded or soft-deleted => return empty
+            return "";
+        }
+        return p.playerName;
+    }
 }
