@@ -38,7 +38,7 @@
     /************************************************************
      *  Contract Addresses / ABIs
      ************************************************************/
-    const DAPP_CONTRACT_ADDRESS = "0x7287991988B0D3DAc396474463a027E97F660EB0";
+    const DAPP_CONTRACT_ADDRESS = "0x06D110905E3cF4200cD71768877158df2bcFEC20";
     // The contract has these functions:
     const DAPP_CONTRACT_ABI = [
       "function onboardPlayerGated(string calldata _playerName) external",
@@ -47,7 +47,7 @@
     ];
 
     // The ERC20 "Grens" token contract
-    const GRENS_CONTRACT_ADDRESS = "0xe92E673C9a775e7E04C0f09880453f430da0F495";
+    const GRENS_CONTRACT_ADDRESS = "0x75CaC475933142d6870b465443c98E84A7aA7F84";
     // Standard ERC20 ABI subset for balanceOf & decimals
     const GRENS_CONTRACT_ABI = [
       "function balanceOf(address owner) view returns (uint256)",
@@ -75,7 +75,7 @@
     });
 
     /************************************************************
-     *  (A) pickMetaMaskProvider => ensure we only use MetaMask
+     *  (A) pickMetaMaskProvider => ensure we use MetaMask only
      ************************************************************/
     async function pickMetaMaskProvider() {
       // If no EVM provider at all:
@@ -260,14 +260,15 @@
      ************************************************************/
     function handleContractError(err, elementId) {
       const statusEl = document.getElementById(elementId);
-      let fallbackMsg = err.message || "Transaction failed.";
+      let fallbackMsg = err.message || "execution reverted.";
       const errorMsg = fallbackMsg.toLowerCase();
 
-      if (errorMsg.includes("Invalid gateway token")) {
+      // Match on known revert strings
+      if (errorMsg.includes("invalid gateway token")) {
         statusEl.textContent = "Error: You do not have a valid gateway token.";
-      } else if (errorMsg.includes("Address already onboarded")) {
+      } else if (errorMsg.includes("address already onboarded")) {
         statusEl.textContent = "Error: This address is already onboarded!";
-      } else if (errorMsg.includes("Name already in use")) {
+      } else if (errorMsg.includes("name already in use")) {
         statusEl.textContent = "Error: That name is already taken!";
       } else {
         statusEl.textContent = "Error: " + fallbackMsg;
