@@ -165,8 +165,8 @@ contract TFCWageDapp {
                 continue;
             }
 
-            // If delta < 7min or > 34min => skip => but update lastMintTime
-            if (delta < 7 minutes ) {
+            // If delta < 4min => skip, or > 34min => skip => but update lastMintTime
+            if (delta < 4 minutes ) {
                 continue;
             }
             if (delta > 34 minutes) {

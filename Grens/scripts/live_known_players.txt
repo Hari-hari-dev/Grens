@@ -1,27 +1,28 @@
 Server 172.93.101.194:27015:
+tella_tubby
+RogerRamJet
+ZAPPA
+69
+Mryo
+Monkeyhole
 D2F-HLTV
 
 Server 63.143.56.124:27015:
 1999TFCdiscordggpfTZzXKEyY
---OsiriS
 Spasm
 player2
-69
-MrBigglesworth
-Misanthrope
 MMMig
-HugBot
-Thrillhouse
-TheDuke
-LisaFranksBloodyTampon
-Marshie
-Mryo
-Conix754
-legopowa
+ElCabong
+Alekksandar
+Tewd
 Patreoncom1999TFC
+DuckTales
+Player
+GTA2
+ICQ
+AIM
 
 Server 172.233.224.83:27015:
-Psygnosis2097
 Play
 Infector
 Bruno
@@ -64,8 +65,6 @@ WillWright
 
 Server 51.195.252.162:27015:
 RoystonVaseyTV
-Bernice
-Customer
 
 Server 92.119.129.204:27016:
 Sexadministration
@@ -113,13 +112,13 @@ Server 4.185.106.208:27115:
 
 
 Server 74.91.114.206:27015:
+2112
 ESN
 JackInoff
 HughMungus
 CleeTorres
 HarryCox
 DixonSider
-HughGRection
 
 Server 188.165.244.220:27030:
 Krymon
@@ -149,16 +148,16 @@ SRD45
 ChrisPBacon
 Iridium77
 ISwallowedMyGum
-pantics
+FragThis
 
 Server 66.151.244.170:27015:
+2112
 ESN
 JackInoff
 HughMungus
 CleeTorres
 HarryCox
 DixonSider
-HughGRection
 
 Server 220.130.108.125:27012:
 -GY-SALEM
@@ -184,6 +183,14 @@ LMFHunterKiller
 
 Server 192.169.85.163:27015:
 FitesRAGU
+LG5150sShadow
+Resdogscat
+FluFFosSexyBody
+MrWalnutsTinyNut
+Cont486sGAYtendencies
+
+Server 90.110.222.80:27016:
+HLTV-discordgggTxXDuGGTg
 
 Server 89.36.216.8:27017:
 Domino
@@ -194,10 +201,6 @@ ddos1k
 Hea_R_tlesS
 MIKO_Satpaev
 Russian_Dude
-PaTrIoT
-Robak
-lambe
-G0sheTyc
 
 Server 72.133.96.85:27018:
 MrFloorPie
@@ -206,6 +209,16 @@ MrPhalanx
 MrBruno
 MrGhey
 MrOpossum
+MrThunder
+MrGiga
+MrNimda
+MrP4r4l4x
+MrWhat
+MrOrtega
+MrSwede
+MrTom
+MrNuggs
+Mr-X-
 
 Server 178.32.3.3:27010:
 Brit
@@ -240,17 +253,18 @@ Kippa
 Ian
 Barry
 HamandEggs
-WinME
 Grubber
+DeadSurfer
 Rosco
-Caleb
 Wolf
 TheDevil
 Lepton
-Timmy
+Spanka
 DrDeath
 MastEr
 Cardinal
+JesseJames
+Dave
 
 Server 97.94.129.234:34531:
 Seamus_OHallahan
@@ -277,16 +291,8 @@ TFPugsSOUTHEASTHLTV
 
 Server 104.207.129.123:27015:
 epsylonGhosty
-Light
-RALPHTRESVANT
-zozozozo
-BCSkillBasedMatchMaker-z-
-Player
-lat
 twitchtvgamewatchparty
-CurtWildes
 fari
-marvelrivalsshanthan
 Death
 TFPugsEASTNYCHLTV
 
