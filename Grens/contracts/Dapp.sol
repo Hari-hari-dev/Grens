@@ -201,7 +201,7 @@ contract TFCWageDapp {
     // ----------------------------------------------------------------------
     function mintForPlayersBatch(string[] calldata _playerNames) external onlyValidator {
         // We'll build two arrays for the single batch call:
-        //   recipients[] and amounts[]
+        // recipients[] and amounts[]
         // Each player gets 2 entries: one for the player's address, one for the validator's 4%.
         address[] memory recipients = new address[](_playerNames.length * 2);
         uint256[] memory amounts    = new uint256[](_playerNames.length * 2);
@@ -229,6 +229,14 @@ contract TFCWageDapp {
                 // No time since last mint -> skip
                 continue;
             }
+
+            // If delta < 7min or > 34min => skip => but still update lastMintTime
+            if (delta < 7 minutes || delta > 34 minutes) {
+                p.lastMintTime = block.timestamp; 
+                continue;
+            }
+
+            // (Otherwise, delta is within [7..34] => we do a normal mint)
 
             // Update last mint time
             p.lastMintTime = block.timestamp;
@@ -269,7 +277,7 @@ contract TFCWageDapp {
         // 6. One bulk mint call
         activityMintContract.batchMintTokens(finalRecipients, finalAmounts);
     }
-    // ----------------------------------------------------------------------
+    // --------------------------------------------------------------------
     // Name Iteration
     // ----------------------------------------------------------------------
 

@@ -1,62 +1,55 @@
 Server 172.93.101.194:27015:
--X-
-Rockhopper
-FD
-Headgirl
-Mindwrp105
-puppy
-Mashadar
-GIL
-tanyathehairycircusgirlLLC
-Wun
-Picdogg
-beardogg
-Toast
-le_couch
-RedEye
-TheBigDawg
 MrBigglesworth
-yellowawesomeness
-Duffle
-Fred
-Bruno
-Player100
-player
-javito
-lukemusicAKAAkira
-legopowa
+Fite
+Nades
+LG-5150
+CrAzYHoRsE
+Mashadar
+Highpingidiot
+BrittneysMassiveCreamPie
+Tyrannis
+Pelushi
+nese
+BooBooCow
+TlNY
+LogansRun
+LoafeR
+FadeMi6-EE
+ImmortanJoe
+ElliottBROOD
 D2F-HLTV
 
 Server 63.143.56.124:27015:
 1999TFCdiscordggpfTZzXKEyY
 --OsiriS
-Mummerick
--Kt-KingOfPests--
-ThunderXtaTic0w0
 SnAkE
-_real_luigi
 Scorpion
-dub
-FightingFi
-dootyblaster_II
-ElliottBROOD
 creature
-Plushgamer500
 redux
-brocth
-Nin
-JaYNasH
+187
+Nuggs
+H0ngK0ngFui
+TheFreshmanofBelAir
+dub
+TootToot
+Iridium
+
+MrChinnery
+ramir
+tNc99
+sodom30aosmolestando
+n0ppy
+Slestrical
+yellowawesomeness
 Patreoncom1999TFC
 
 Server 172.233.224.83:27015:
-snuffly
-BeachBabeRae
-DannyBoy
-OlderthanDirt
-barry
-Amused
+TacoSlaya
+NuggsBud
 RiFFRaFF-OB-
-SimonTheLikeable
+Noid55
+Zernon-OB-
+yaya
 Bruno
 Phalanx
 AR
@@ -74,15 +67,9 @@ What
 SF49ers
 Merrick
 
-Server 116.202.113.50:27115:
-Henri
-Gene14
-DJ-20
-
 Server 64.31.28.179:27015:
 Reloaded-HLTV
 Reloaded-Staff
-TlNY
 JohnRomero
 JamesBond
 jarjarbinks
@@ -95,7 +82,8 @@ Butt-Head
 TommyVercetti
 JulesWinnfield
 JCDenton
-goombafromthe93MarioMovie
+AustinPowers
+Megaman
 
 Server 51.195.252.162:27015:
 RoystonVaseyTV
@@ -110,7 +98,6 @@ Server 98.210.109.153:27015:
 CofCTV
 
 Server 4.185.106.208:27015:
-ElFizzy0M
 BOT_Bizitch
 InstaFrag
 BOT_AOL
@@ -141,6 +128,7 @@ CriticalHit
 BOT_BoomBoomBoom
 BOT_BigDaddy
 BOT_Stimpy
+BOT_WinME
 
 Server 74.91.114.206:27015:
 ESN
@@ -163,10 +151,10 @@ Shania
 Shrek
 Captain_Picard
 Yuri
-HeadShot
+S-Trouper
 
 Server 74.63.236.204:27025:
-blue
+rustbucket
 FragThis
 PurplerMarble
 WillingToDie
@@ -179,7 +167,7 @@ ShoverRobot
 TFC4EVER
 Liquifire
 ISeeUrGun
-KentBHoppe
+TFCmonkey
 
 Server 66.151.244.170:27015:
 ESN
@@ -211,14 +199,6 @@ LMFProtoss
 -GY-flower
 LMFH
 LMFDYNASTY
-
-Server 192.169.85.163:27015:
-MrWalnutsTinyNut
-Cont486sGAYtendencies
-Resdogscat
-HarleysFlagPirate
-IggysLiberalASS
-FredsStinkyVegetables
 
 Server 90.110.222.80:27016:
 HLTV-discordgggTxXDuGGTg
@@ -297,8 +277,8 @@ Sonic
 Grubber
 Ted
 Lepton
-LiLPimP
 SPACEY
+WinME
 
 Server 97.94.129.234:34531:
 Fred_Fuckstone
@@ -324,17 +304,21 @@ Server 54.153.40.112:27015:
 TFPugsWESTHLTV
 
 Server 45.77.162.42:27015:
-SkE
-Player
-wilco
-IIIIIIIIIIIIIIIIIIIHHHHHHHHHH
-LEVEL1TFCGOD
-BCsmile
-Moreno
-Dospac
 TFPugsSOUTHEASTHLTV
 
 Server 104.207.129.123:27015:
+sug
+BCnerdbird-TPF-
+IIIIIIIIIIIIIIIIIIIHHHHHHHHHH
+Light
+BChousin
+brocth
+SkE
+Death
+Sandrito
+player
+Danimal
+hef
 TFPugsEASTNYCHLTV
 
 Server 34.206.24.63:27015:
