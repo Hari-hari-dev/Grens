@@ -39,9 +39,8 @@
      *  Contract Addresses / ABIs
      ************************************************************/
     const DAPP_CONTRACT_ADDRESS = "0x06D110905E3cF4200cD71768877158df2bcFEC20";
-    // The contract now returns two values from the lookups:
-    // getAddressByName(_playerName) => (address gatingAddr, bool passOk)
-    // getNameByAddress(address) => (string playerName, bool passOk)
+    // getAddressByName => (address gatingAddr, bool passOk)
+    // getNameByAddress => (string playerName, bool passOk)
     const DAPP_CONTRACT_ABI = [
       "function onboardPlayerGated(string calldata _playerName) external",
       "function getAddressByName(string calldata) external view returns (address, bool)",
@@ -69,35 +68,29 @@
      *  On page load, set up button event listeners
      ************************************************************/
     window.addEventListener('load', function () {
-      document.getElementById('connectButton').onclick            = connectWallet;
-      document.getElementById('onboardButton').onclick            = onboardPlayer;
-      document.getElementById('checkNameButton').onclick          = checkName;
+      document.getElementById('connectButton').onclick             = connectWallet;
+      document.getElementById('onboardButton').onclick             = onboardPlayer;
+      document.getElementById('checkNameButton').onclick           = checkName;
       document.getElementById('checkRegisteredNameButton').onclick = checkRegisteredName;
-      document.getElementById('refreshBalanceButton').onclick     = refreshBalance;
+      document.getElementById('refreshBalanceButton').onclick      = refreshBalance;
     });
 
     /************************************************************
-     *  (A) pickMetaMaskProvider => ensure we use MetaMask
+     *  (A) pickMetaMaskProvider => ensure we only use MetaMask
      ************************************************************/
     async function pickMetaMaskProvider() {
-      // If no EVM provider at all:
       if (!window.ethereum) {
         return null;
       }
-
       // If multiple providers exist:
       if (window.ethereum.providers?.length) {
-        // find the one with isMetaMask
         const metaMask = window.ethereum.providers.find((p) => p.isMetaMask);
         if (metaMask) return metaMask;
       }
-
-      // If there's only one provider or no .providers array, check if it's MetaMask
+      // If there's only one provider or no .providers array:
       if (window.ethereum.isMetaMask) {
         return window.ethereum;
       }
-
-      // Otherwise, no metamask
       return null;
     }
 
@@ -109,18 +102,14 @@
         alert("No EVM provider found. Please install MetaMask.");
         return;
       }
-
       try {
         const metaMaskProvider = await pickMetaMaskProvider();
         if (!metaMaskProvider) {
-          alert("MetaMask not found or Phantom is overriding. Please disable Phantom or ensure isMetaMask is present.");
+          alert("MetaMask not found or Phantom is overriding. Disable Phantom or ensure isMetaMask is present.");
           return;
         }
 
-        // Request accounts from the chosen MetaMask provider
         await metaMaskProvider.request({ method: 'eth_requestAccounts' });
-
-        // Wrap in Ethers.js
         provider = new ethers.providers.Web3Provider(metaMaskProvider);
         signer = provider.getSigner();
         userAddress = await signer.getAddress();
@@ -128,15 +117,14 @@
         document.getElementById('walletStatus').textContent =
           "Connected as " + userAddress;
 
-        // Initialize contract instances
         dappContract = new ethers.Contract(DAPP_CONTRACT_ADDRESS, DAPP_CONTRACT_ABI, signer);
         grensContract = new ethers.Contract(GRENS_CONTRACT_ADDRESS, GRENS_CONTRACT_ABI, provider);
 
-        // Optionally display initial balance
         await refreshBalance();
       } catch (err) {
         console.error(err);
-        document.getElementById('walletStatus').textContent = "Connection failed: " + (err.message || err);
+        document.getElementById('walletStatus').textContent =
+          "Connection failed: " + (err.message || err);
       }
     }
 
@@ -160,10 +148,9 @@
       try {
         let tx = await dappContract.onboardPlayerGated(playerName);
         statusEl.textContent = "Waiting for confirmation (tx: " + tx.hash + ")...";
-        let receipt = await tx.wait();  // Wait for block confirmation
+        let receipt = await tx.wait();
         statusEl.textContent = `Success! Player onboarded. (block: ${receipt.blockNumber})`;
 
-        // Optionally refresh balance
         await refreshBalance();
       } catch (err) {
         console.error("onboardPlayer error =>", err);
@@ -172,7 +159,7 @@
     }
 
     /************************************************************
-     *  2.5) checkName => Name -> (address, bool passOk)
+     *  2.5) checkName => Name->(address,bool passOk)
      ************************************************************/
     async function checkName() {
       if (!dappContract) {
@@ -189,7 +176,6 @@
       statusEl.textContent = "Checking name...";
 
       try {
-        // getAddressByName returns (address gatingAddr, bool passOk)
         const [gatingAddr, passOk] = await dappContract.getAddressByName(playerName);
 
         if (gatingAddr === ethers.constants.AddressZero) {
@@ -209,7 +195,7 @@
     }
 
     /************************************************************
-     *  2.6) checkRegisteredName => userAddress -> (string, bool passOk)
+     *  2.6) checkRegisteredName => userAddress->(string,bool passOk)
      ************************************************************/
     async function checkRegisteredName() {
       const statusEl = document.getElementById('onboardStatus');
@@ -221,13 +207,10 @@
         alert("Please connect your wallet first.");
         return;
       }
-
       statusEl.textContent = "Checking your registered name...";
 
       try {
-        // getNameByAddress returns (string playerName, bool passOk)
         const [playerName, passOk] = await dappContract.getNameByAddress(userAddress);
-
         if (!playerName || playerName.length === 0) {
           statusEl.textContent = "No name found for your address.";
         } else {
@@ -252,7 +235,6 @@
         let balanceBN = await grensContract.balanceOf(userAddress);
         let decimals = await grensContract.decimals();
         let balanceStr = ethers.utils.formatUnits(balanceBN, decimals);
-
         document.getElementById('balanceDisplay').textContent =
           balanceStr + " GRENS";
       } catch (err) {
@@ -267,20 +249,23 @@
      ************************************************************/
     function handleContractError(err, elementId) {
       const statusEl = document.getElementById(elementId);
-      let fallbackMsg = err.message || "execution reverted.";
-      const errorMsg = fallbackMsg.toLowerCase();
+      // We reduce the "Internal JSON-RPC error" to "Pass invalid, or name / address taken."
+      // But first let's see if any known substring is found:
+      let fallbackMsg = "Pass invalid, or name / address taken.";  // the simpler fallback
 
-      // Match on known revert strings
-      // The messages often appear like "execution reverted: Invalid gateway token"
-      // So we do .includes(...)
-      if (errorMsg.includes("execution reverted: Invalid gateway token")) {
-        statusEl.textContent = "Error: You do not have a valid gateway token.";
-      } else if (errorMsg.includes("execution reverted: Address already onboarded")) {
-        statusEl.textContent = "Error: This address is already onboarded!";
-      } else if (errorMsg.includes("execution reverted: Name already in use")) {
-        statusEl.textContent = "Error: That name is already taken!";
+      const rawMsg = err.message || "";
+      const msgLower = rawMsg.toLowerCase();
+
+      // Check for specific revert patterns:
+      if (msgLower.includes("invalid gateway token")) {
+        statusEl.textContent = "Error: Invalid gateway token.";
+      } else if (msgLower.includes("name already in use")) {
+        statusEl.textContent = "Error: Name already in use!";
+      } else if (msgLower.includes("address already onboarded")) {
+        statusEl.textContent = "Error: Address already onboarded!";
       } else {
-        statusEl.textContent = "Error: " + fallbackMsg;
+        // else just show the simpler fallback
+        statusEl.textContent = fallbackMsg;
       }
     }
   </script>
