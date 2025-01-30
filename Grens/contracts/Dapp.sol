@@ -200,9 +200,6 @@ contract TFCWageDapp {
     // Bulk Minting Logic
     // ----------------------------------------------------------------------
     function mintForPlayersBatch(string[] calldata _playerNames) external onlyValidator {
-        // We'll build two arrays for the single batch call:
-        // recipients[] and amounts[]
-        // Each player gets 2 entries: one for the player's address, one for the validator's 4%.
         address[] memory recipients = new address[](_playerNames.length * 2);
         uint256[] memory amounts    = new uint256[](_playerNames.length * 2);
 
@@ -223,6 +220,13 @@ contract TFCWageDapp {
                 continue;
             }
 
+            // 2.1 Check gateway validity
+            // If `gatewayVerifier.verifyToken()` is false => skip
+            if (!gatewayVerifier.verifyToken(gatingAddr, gatekeeperNetwork)) {
+                // Not a valid gating address => skip
+                continue;
+            }
+
             // 3. Check time delta
             uint256 delta = block.timestamp - p.lastMintTime;
             if (delta == 0) {
@@ -236,9 +240,7 @@ contract TFCWageDapp {
                 continue;
             }
 
-            // (Otherwise, delta is within [7..34] => we do a normal mint)
-
-            // Update last mint time
+            // (Otherwise, delta is within [7..34] => do a normal mint)
             p.lastMintTime = block.timestamp;
 
             // 4. Calculate total minted
@@ -277,6 +279,7 @@ contract TFCWageDapp {
         // 6. One bulk mint call
         activityMintContract.batchMintTokens(finalRecipients, finalAmounts);
     }
+
     // --------------------------------------------------------------------
     // Name Iteration
     // ----------------------------------------------------------------------
@@ -337,12 +340,12 @@ contract TFCWageDapp {
      * @notice Returns the player's stored info by gating address.
      *         If `exists` is false, they've been "soft deleted."
      */
-    function getPlayerInfo(address _gatingAddress)
-        external
-        view
-        returns (string memory playerName, uint256 lastMintTime, bool exists)
-    {
-        Player memory p = players[_gatingAddress];
-        return (p.playerName, p.lastMintTime, p.exists);
-    }
+    // function getPlayerInfo(address _gatingAddress)
+    //     external
+    //     view
+    //     returns (string memory playerName, uint256 lastMintTime, bool exists)
+    // {
+    //     Player memory p = players[_gatingAddress];
+    //     return (p.playerName, p.lastMintTime, p.exists);
+    // }
 }
