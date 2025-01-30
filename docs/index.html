@@ -263,11 +263,11 @@
       let fallbackMsg = err.message || "Transaction failed.";
       const errorMsg = fallbackMsg.toLowerCase();
 
-      if (errorMsg.includes("invalid gateway token")) {
+      if (errorMsg.includes("Invalid gateway token")) {
         statusEl.textContent = "Error: You do not have a valid gateway token.";
-      } else if (errorMsg.includes("address already onboarded")) {
+      } else if (errorMsg.includes("Address already onboarded")) {
         statusEl.textContent = "Error: This address is already onboarded!";
-      } else if (errorMsg.includes("name already in use")) {
+      } else if (errorMsg.includes("Name already in use")) {
         statusEl.textContent = "Error: That name is already taken!";
       } else {
         statusEl.textContent = "Error: " + fallbackMsg;

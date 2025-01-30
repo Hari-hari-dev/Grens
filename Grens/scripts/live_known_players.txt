@@ -1,55 +1,25 @@
 Server 172.93.101.194:27015:
-MrBigglesworth
-Fite
-Nades
-LG-5150
-CrAzYHoRsE
-Mashadar
-Highpingidiot
-BrittneysMassiveCreamPie
-Tyrannis
-Pelushi
-nese
-BooBooCow
-TlNY
-LogansRun
-LoafeR
-FadeMi6-EE
-ImmortanJoe
-ElliottBROOD
 D2F-HLTV
 
 Server 63.143.56.124:27015:
+twitchtvgamewatchparty
 1999TFCdiscordggpfTZzXKEyY
 --OsiriS
-SnAkE
-Scorpion
-creature
-redux
-187
-Nuggs
-H0ngK0ngFui
-TheFreshmanofBelAir
-dub
-TootToot
-Iridium
-
-MrChinnery
-ramir
-tNc99
-sodom30aosmolestando
-n0ppy
-Slestrical
-yellowawesomeness
+player2
+Sperber72
+lark
+--O_C_D
+MLhechor
+Neiger
 Patreoncom1999TFC
+DuckTales
+Player
+GTA2
+ICQ
+AIM
 
 Server 172.233.224.83:27015:
-TacoSlaya
 NuggsBud
-RiFFRaFF-OB-
-Noid55
-Zernon-OB-
-yaya
 Bruno
 Phalanx
 AR
@@ -67,6 +37,9 @@ What
 SF49ers
 Merrick
 
+Server 116.202.113.50:27115:
+Henri
+
 Server 64.31.28.179:27015:
 Reloaded-HLTV
 Reloaded-Staff
@@ -82,8 +55,8 @@ Butt-Head
 TommyVercetti
 JulesWinnfield
 JCDenton
-AustinPowers
-Megaman
+SegaHater
+PeterGriffin
 
 Server 51.195.252.162:27015:
 RoystonVaseyTV
@@ -98,46 +71,24 @@ Server 98.210.109.153:27015:
 CofCTV
 
 Server 4.185.106.208:27015:
-BOT_Bizitch
-InstaFrag
+BOT_TacticalTerror
+BOT_Spaminator
 BOT_AOL
-BOT_Carly
-DoubleDamage
-ScoutSniper
-BOT_Spanner
-pyroPower
-ClutchMedic
-BOT_MoFugger
-QuickFixer
-headshot_hero
-BOT_Kenny
+BOT_n00b_h8ter
+BOT_SniperStrike
+BOT_Steave
+BOT_TheDefender
 BOT_SniperElite
-fragmachine
-BarrelRoller
-BOT_Earp
-BOT_SuperSapper
-C4Crazed
-BOT_Alfonzo
-BOT_BulletBarrage
-BOT_RocketRogue
-EngineerElite
-BOT_MadMedic
-BOT_Timmy
-rocketranger
-CriticalHit
-BOT_BoomBoomBoom
-BOT_BigDaddy
-BOT_Stimpy
-BOT_WinME
+BOT_Herb
 
 Server 74.91.114.206:27015:
+desGemeaux
 ESN
-BenDover
-DixieNormus
-OliverCloseoff
-HarryCox
 JackInoff
-HughGRection
+HughMungus
+CleeTorres
+HarryCox
+DixonSider
 
 Server 188.165.244.220:27030:
 TVS
@@ -154,29 +105,29 @@ Yuri
 S-Trouper
 
 Server 74.63.236.204:27025:
-rustbucket
-FragThis
-PurplerMarble
-WillingToDie
-GroundBeefSupreme
-BYzrBud
-WellWench
-IShootWell
-ISwallowedMyGum
+CyKoBoT
+FNSJunkie
+ILiveToDie
+TwistedNetwork
+c100
+GeneralBot
+ScarysLeftArm
+BOTid
 ShoverRobot
-TFC4EVER
-Liquifire
-ISeeUrGun
-TFCmonkey
+SRD45
+ChrisPBacon
+Iridium77
+ISwallowedMyGum
+BYzrBud
 
 Server 66.151.244.170:27015:
+desGemeaux
 ESN
-BenDover
-DixieNormus
-OliverCloseoff
-HarryCox
 JackInoff
-HughGRection
+HughMungus
+CleeTorres
+HarryCox
+DixonSider
 
 Server 220.130.108.125:27012:
 -GY-SALEM
@@ -184,38 +135,43 @@ Server 220.130.108.125:27012:
 LMFspeed-fire_
 -GY-KAMISAMA
 LMFDeathofGod
+LMFSS793
+-GY-GoodGA
 LMFT-ReX
-LMFHunterKiller
-LMF87CT
-LMFJK
--GY-Seliv
-LMFPenny
-LMFLzy
-LMFProtoss
--GY-COVI
--GY-Mooneyes
--GY-2099AC
+LMFCrow
+-GY-KnifeFat
+-GY-JERFER
+LMFRaptor
+LMFGGLONG
 -GY-MatsuTakako
--GY-flower
-LMFH
-LMFDYNASTY
+LMFISEEBI
+-GY-541
+LMFLouwbas
+VOMDannyKL
+-GY-Godman
+-GY-Mooneyes
 
-Server 90.110.222.80:27016:
-HLTV-discordgggTxXDuGGTg
+Server 192.169.85.163:27015:
+FitesRAGU
+LG5150sShadow
+Resdogscat
+FluFFosSexyBody
+MrWalnutsTinyNut
+Cont486sGAYtendencies
 
 Server 89.36.216.8:27017:
-VIP-yangguo
-yuliya
-
-ureX
-HotBoy
-stan1a2
-unnamed
+Domino
+pollo
+TyOmIcH
 HeroIN
-EmanuelMendesPlay
-SHOOT
+ddos1k
+Hea_R_tlesS
+MIKO_Satpaev
+Russian_Dude
+PaTrIoT
 Robak
-PunchDreiko
+lambe
+yuliya
 
 Server 72.133.96.85:27018:
 MrFloorPie
@@ -252,6 +208,7 @@ Cartman
 Spanner
 
 Server 192.169.81.179:27015:
+ACK
 JohnWick
 Cyberjoker
 Sylvester
@@ -261,34 +218,33 @@ Bishop
 Kangaka
 Rambo
 CyberCop
-Dex
 
 Server 121.99.240.213:27018:
-HamandEggs
+BigDaddy
 Kippa
-Martin
-Hammer
-TheDevil
-Glenis
-Dave
-Chickenlegs
+Ian
+Barry
+HamandEggs
+Earp
+DeadSurfer
+DrDeath
+Curtis
 Steave
-Sonic
+Caleb
+Wolf
+Albert
+Clay
 Grubber
-Ted
-Lepton
-SPACEY
-WinME
 
 Server 97.94.129.234:34531:
-Fred_Fuckstone
-FACE_FUCKER_9000
-Ranjer
-Jason_Grant
-Granny_Gumjob
-TubGuy
-Colorjak
-NickTen
+Seamus_OHallahan
+DarthVader
+i_shit_myself_and_im_proud
+BeardKip
+Friend
+SonicMaDMaxMiXX
+GandalfTheGray
+Chode_Chiggler
 
 Server 74.91.122.11:27015:
 Joe
@@ -300,25 +256,10 @@ Server 45.32.207.158:27015:
 Skuttlebot
 Skuttlebot
 
-Server 54.153.40.112:27015:
-TFPugsWESTHLTV
-
 Server 45.77.162.42:27015:
 TFPugsSOUTHEASTHLTV
 
 Server 104.207.129.123:27015:
-sug
-BCnerdbird-TPF-
-IIIIIIIIIIIIIIIIIIIHHHHHHHHHH
-Light
-BChousin
-brocth
-SkE
-Death
-Sandrito
-player
-Danimal
-hef
 TFPugsEASTNYCHLTV
 
 Server 34.206.24.63:27015:
