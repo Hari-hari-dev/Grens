@@ -2,24 +2,28 @@ Server 172.93.101.194:27015:
 D2F-HLTV
 
 Server 63.143.56.124:27015:
-twitchtvgamewatchparty
 1999TFCdiscordggpfTZzXKEyY
 --OsiriS
+Spasm
 player2
-Sperber72
-lark
---O_C_D
-MLhechor
-Neiger
+69
+MrBigglesworth
+Misanthrope
+MMMig
+HugBot
+Thrillhouse
+TheDuke
+LisaFranksBloodyTampon
+Marshie
+Mryo
+Conix754
+legopowa
 Patreoncom1999TFC
-DuckTales
-Player
-GTA2
-ICQ
-AIM
 
 Server 172.233.224.83:27015:
-NuggsBud
+Psygnosis2097
+Play
+Infector
 Bruno
 Phalanx
 AR
@@ -55,11 +59,13 @@ Butt-Head
 TommyVercetti
 JulesWinnfield
 JCDenton
-SegaHater
-PeterGriffin
+MichaelRomeo
+WillWright
 
 Server 51.195.252.162:27015:
 RoystonVaseyTV
+Bernice
+Customer
 
 Server 92.119.129.204:27016:
 Sexadministration
@@ -80,17 +86,44 @@ BOT_Steave
 BOT_TheDefender
 BOT_SniperElite
 BOT_Herb
+FlameFury
+NoScopeKing
+BOT_TurboTerrorist
+BulletStorm
+BOT_WinME
+BOT_Earp
+ScoutSniper
+BOT_LiLPimP
+BOT_FragFury
+BOT_MoFugger
+BOT_Spanner
+BOT_Grubber
+SilencedShot
+RocketWhisperer
+BOT_Dotcom
+BOT_PyroPanic
+BOT_AntiHuman
+BOT_YoMama
+BarrelRoller
+BOT_SpawnKiller
+BOT_SpeedySlayer
+BOT_SilentSaboteur
+
+Server 4.185.106.208:27115:
+
 
 Server 74.91.114.206:27015:
-desGemeaux
 ESN
 JackInoff
 HughMungus
 CleeTorres
 HarryCox
 DixonSider
+HughGRection
 
 Server 188.165.244.220:27030:
+Krymon
+MilesTailsPrower
 TVS
 M0rph1n3
 John_McClane
@@ -101,8 +134,6 @@ Spock
 Shania
 Shrek
 Captain_Picard
-Yuri
-S-Trouper
 
 Server 74.63.236.204:27025:
 CyKoBoT
@@ -118,16 +149,16 @@ SRD45
 ChrisPBacon
 Iridium77
 ISwallowedMyGum
-BYzrBud
+pantics
 
 Server 66.151.244.170:27015:
-desGemeaux
 ESN
 JackInoff
 HughMungus
 CleeTorres
 HarryCox
 DixonSider
+HughGRection
 
 Server 220.130.108.125:27012:
 -GY-SALEM
@@ -137,27 +168,22 @@ LMFspeed-fire_
 LMFDeathofGod
 LMFSS793
 -GY-GoodGA
-LMFT-ReX
-LMFCrow
--GY-KnifeFat
--GY-JERFER
+-GY-Messih23
 LMFRaptor
-LMFGGLONG
--GY-MatsuTakako
-LMFISEEBI
--GY-541
 LMFLouwbas
-VOMDannyKL
--GY-Godman
--GY-Mooneyes
+VOMTITANYO
+LMFSpeedFire
+LMFSIN
+LMFLung
+LMFDYNASTY
+-SGL-NAVY
+LMFyangjj
+LMFHunterKiller
+-GY--2001-
+-GY-DontkillmelaQ_Q
 
 Server 192.169.85.163:27015:
 FitesRAGU
-LG5150sShadow
-Resdogscat
-FluFFosSexyBody
-MrWalnutsTinyNut
-Cont486sGAYtendencies
 
 Server 89.36.216.8:27017:
 Domino
@@ -171,7 +197,7 @@ Russian_Dude
 PaTrIoT
 Robak
 lambe
-yuliya
+G0sheTyc
 
 Server 72.133.96.85:27018:
 MrFloorPie
@@ -180,16 +206,6 @@ MrPhalanx
 MrBruno
 MrGhey
 MrOpossum
-MrThunder
-MrGiga
-MrNimda
-MrP4r4l4x
-MrWhat
-MrOrtega
-MrSwede
-MrTom
-MrNuggs
-Mr-X-
 
 Server 178.32.3.3:27010:
 Brit
@@ -205,10 +221,9 @@ Cardinal
 MoFugger
 MoFugger
 Cartman
-Spanner
+FuzzyBunny
 
 Server 192.169.81.179:27015:
-ACK
 JohnWick
 Cyberjoker
 Sylvester
@@ -218,23 +233,24 @@ Bishop
 Kangaka
 Rambo
 CyberCop
+Undertaker
 
 Server 121.99.240.213:27018:
-BigDaddy
 Kippa
 Ian
 Barry
 HamandEggs
-Earp
-DeadSurfer
-DrDeath
-Curtis
-Steave
+WinME
+Grubber
+Rosco
 Caleb
 Wolf
-Albert
-Clay
-Grubber
+TheDevil
+Lepton
+Timmy
+DrDeath
+MastEr
+Cardinal
 
 Server 97.94.129.234:34531:
 Seamus_OHallahan
@@ -260,6 +276,18 @@ Server 45.77.162.42:27015:
 TFPugsSOUTHEASTHLTV
 
 Server 104.207.129.123:27015:
+epsylonGhosty
+Light
+RALPHTRESVANT
+zozozozo
+BCSkillBasedMatchMaker-z-
+Player
+lat
+twitchtvgamewatchparty
+CurtWildes
+fari
+marvelrivalsshanthan
+Death
 TFPugsEASTNYCHLTV
 
 Server 34.206.24.63:27015:

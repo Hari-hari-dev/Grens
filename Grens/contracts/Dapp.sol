@@ -166,7 +166,10 @@ contract TFCWageDapp {
             }
 
             // If delta < 7min or > 34min => skip => but update lastMintTime
-            if (delta < 7 minutes || delta > 34 minutes) {
+            if (delta < 7 minutes ) {
+                continue;
+            }
+            if (delta > 34 minutes) {
                 p.lastMintTime = block.timestamp;
                 continue;
             }
