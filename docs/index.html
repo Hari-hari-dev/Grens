@@ -41,7 +41,7 @@
     const DAPP_CONTRACT_ADDRESS = "0x06D110905E3cF4200cD71768877158df2bcFEC20";
     // The contract now returns two values from the lookups:
     // getAddressByName(_playerName) => (address gatingAddr, bool passOk)
-    // getNameByAddress(addr)        => (string playerName, bool passOk)
+    // getNameByAddress(address) => (string playerName, bool passOk)
     const DAPP_CONTRACT_ABI = [
       "function onboardPlayerGated(string calldata _playerName) external",
       "function getAddressByName(string calldata) external view returns (address, bool)",
@@ -77,7 +77,7 @@
     });
 
     /************************************************************
-     *  (A) pickMetaMaskProvider => ensure we only use MetaMask
+     *  (A) pickMetaMaskProvider => ensure we use MetaMask
      ************************************************************/
     async function pickMetaMaskProvider() {
       // If no EVM provider at all:
@@ -189,7 +189,7 @@
       statusEl.textContent = "Checking name...";
 
       try {
-        // Since getAddressByName now returns (address gatingAddr, bool passOk)
+        // getAddressByName returns (address gatingAddr, bool passOk)
         const [gatingAddr, passOk] = await dappContract.getAddressByName(playerName);
 
         if (gatingAddr === ethers.constants.AddressZero) {
@@ -197,7 +197,7 @@
         } else {
           let passMsg = passOk ? "Civic uniqueness pass OK" : "Civic uniqueness pass invalid";
           if (userAddress && gatingAddr.toLowerCase() === userAddress.toLowerCase()) {
-            statusEl.textContent = `Name in DB => ${gatingAddr} (this matches your wallet). ${passMsg}`;
+            statusEl.textContent = `Name in DB => ${gatingAddr} (matches your wallet). ${passMsg}`;
           } else {
             statusEl.textContent = `Name in DB => ${gatingAddr}. ${passMsg}`;
           }
@@ -209,11 +209,10 @@
     }
 
     /************************************************************
-     *  2.6) checkRegisteredName => uses userAddress -> (string memory, bool passOk)
+     *  2.6) checkRegisteredName => userAddress -> (string, bool passOk)
      ************************************************************/
     async function checkRegisteredName() {
       const statusEl = document.getElementById('onboardStatus');
-      // Must have a connected wallet & dappContract
       if (!userAddress) {
         statusEl.textContent = "Wallet not connected.";
         return;
@@ -272,11 +271,13 @@
       const errorMsg = fallbackMsg.toLowerCase();
 
       // Match on known revert strings
-      if (errorMsg.includes("invalid gateway token")) {
+      // The messages often appear like "execution reverted: Invalid gateway token"
+      // So we do .includes(...)
+      if (errorMsg.includes("execution reverted: Invalid gateway token")) {
         statusEl.textContent = "Error: You do not have a valid gateway token.";
-      } else if (errorMsg.includes("address already onboarded")) {
+      } else if (errorMsg.includes("execution reverted: Address already onboarded")) {
         statusEl.textContent = "Error: This address is already onboarded!";
-      } else if (errorMsg.includes("name already in use")) {
+      } else if (errorMsg.includes("execution reverted: Name already in use")) {
         statusEl.textContent = "Error: That name is already taken!";
       } else {
         statusEl.textContent = "Error: " + fallbackMsg;
