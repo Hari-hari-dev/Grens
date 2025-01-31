@@ -1,10 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-
-
 contract WageMint {
-
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
     bytes32 private storedNextPKH;
@@ -36,9 +33,17 @@ contract WageMint {
     event CommissionSet2(uint256 newCoinCommission);
     event CommissionAddressSet(address newCommissionAddress);
     event CommissionAddressSet2(address newCommissionAddress);
-    event Minted(address indexed minter, address indexed account, uint256 amount);
+    event Minted(
+        address indexed minter,
+        address indexed account,
+        uint256 amount
+    );
     event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 value
+    );
     event Staked(address indexed staker, uint256 amount);
     event Unstaked(address indexed staker, uint256 amount);
 
@@ -47,7 +52,6 @@ contract WageMint {
         //address initialAuthorizedMinter,
         string memory __name,
         string memory __symbol
-
     ) {
         _name = __name;
         _symbol = __symbol;
@@ -57,35 +61,42 @@ contract WageMint {
 
     function _initializeMintProcess(address initialAuthorizedMinter) private {
         authorizedMinter = initialAuthorizedMinter;
-        _mint(authorizedMinter, 80000 * (10 ** uint256(decimals())));
+        _mint(authorizedMinter, 80000 * (10**uint256(decimals())));
         authorizedMinter = address(0);
     }
 
-
-    function batchMintTokens(address[] memory accounts, uint256[] memory amounts) external {
+    function batchMintTokens(
+        address[] memory accounts,
+        uint256[] memory amounts
+    ) external {
         require(msg.sender == authorizedMinter, "GP_Mint: Unauthorized minter");
-        require(accounts.length == amounts.length, "GP_Mint: Accounts and amounts length mismatch");
+        require(
+            accounts.length == amounts.length,
+            "GP_Mint: Accounts and amounts length mismatch"
+        );
 
         uint256 totalAmount = 0;
 
-
         for (uint256 i = 0; i < accounts.length; i++) {
             if (accounts[i] == address(0)) {
-                continue;  // Skip the zero address
+                continue; // Skip the zero address
             }
 
             // Mint tokens to the user
             _mint(accounts[i], amounts[i]);
 
-
-        // Update the total supply
-        _totalSupply += totalAmount;
+            // Update the total supply
+            _totalSupply += totalAmount;
         }
-    // Staking Functions
+        // Staking Functions
     }
+
     function stakeTokens(uint256 amount) public {
         require(amount > 0, "Amount must be greater than 0");
-        require(_balances[msg.sender] >= amount, "Insufficient balance to stake");
+        require(
+            _balances[msg.sender] >= amount,
+            "Insufficient balance to stake"
+        );
 
         // Update the staked balance with any pending rewards
         _updateStakedBalance(msg.sender);
@@ -103,11 +114,18 @@ contract WageMint {
         // Update the staked balance with any pending rewards
         _updateStakedBalance(msg.sender);
 
-        require(_stakedBalances[msg.sender] >= amount, "Insufficient staked balance");
-        
+        require(
+            _stakedBalances[msg.sender] >= amount,
+            "Insufficient staked balance"
+        );
+
         // Ensure that two staking intervals have passed since the last stake
-        require(block.timestamp >= _lastStakedTime[msg.sender] + 2 * _stakingInterval, "Tokens are still locked");
-        
+        require(
+            block.timestamp >=
+                _lastStakedTime[msg.sender] + 2 * _stakingInterval,
+            "Tokens are still locked"
+        );
+
         _stakedBalances[msg.sender] -= amount;
         _balances[msg.sender] += amount;
 
@@ -128,7 +146,11 @@ contract WageMint {
         }
     }
 
-    function calculateCompoundedStakedBalance(address staker) public view returns (uint256) {
+    function calculateCompoundedStakedBalance(address staker)
+        public
+        view
+        returns (uint256)
+    {
         uint256 stakedAmount = _stakedBalances[staker];
         uint256 stakedDuration = block.timestamp - _lastStakedTime[staker];
         uint256 periods = stakedDuration / _stakingInterval;
@@ -151,7 +173,11 @@ contract WageMint {
         return newStakedAmount;
     }
 
-    function _pow(uint256 base, uint256 exponent) internal pure returns (uint256 result) {
+    function _pow(uint256 base, uint256 exponent)
+        internal
+        pure
+        returns (uint256 result)
+    {
         result = 1e18; // Start with 1 in 1e18 scale
         while (exponent > 0) {
             if (exponent % 2 == 1) {
@@ -176,19 +202,19 @@ contract WageMint {
 
     // Existing functions...
 
-    function setAuthorizedMinter(
-        address minter
-    ) public {
-        require (!init2);
+    function setAuthorizedMinter(address minter) public {
+        require(!init2);
         // Perform Lamport Master Check
         authorizedMinter = minter;
         init2 = false;
     }
 
-
     // Internal mint function to handle actual minting and balance updating
     function _mint(address account, uint256 amount) internal {
-        require(account != address(0), "GP_Mint: Cannot mint to the zero address");
+        require(
+            account != address(0),
+            "GP_Mint: Cannot mint to the zero address"
+        );
         _totalSupply += amount;
         _balances[account] += amount;
         emit Minted(msg.sender, account, amount);
@@ -217,7 +243,10 @@ contract WageMint {
 
     function transfer(address to, uint256 amount) public returns (bool) {
         require(to != address(0), "ERC20: transfer to the zero address");
-        require(_balances[msg.sender] >= amount, "ERC20: transfer amount exceeds balance");
+        require(
+            _balances[msg.sender] >= amount,
+            "ERC20: transfer amount exceeds balance"
+        );
 
         _balances[msg.sender] -= amount;
         _balances[to] += amount;
@@ -231,15 +260,29 @@ contract WageMint {
         return true;
     }
 
-    function allowance(address owner, address spender) public view returns (uint256) {
+    function allowance(address owner, address spender)
+        public
+        view
+        returns (uint256)
+    {
         return _allowances[owner][spender];
     }
 
-    function transferFrom(address from, address to, uint256 amount) public returns (bool) {
+    function transferFrom(
+        address from,
+        address to,
+        uint256 amount
+    ) public returns (bool) {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
-        require(_balances[from] >= amount, "ERC20: transfer amount exceeds balance");
-        require(_allowances[from][msg.sender] >= amount, "ERC20: transfer amount exceeds allowance");
+        require(
+            _balances[from] >= amount,
+            "ERC20: transfer amount exceeds balance"
+        );
+        require(
+            _allowances[from][msg.sender] >= amount,
+            "ERC20: transfer amount exceeds allowance"
+        );
 
         _balances[from] -= amount;
         _balances[to] += amount;
@@ -248,15 +291,24 @@ contract WageMint {
         return true;
     }
 
-    function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {
+    function increaseAllowance(address spender, uint256 addedValue)
+        public
+        returns (bool)
+    {
         _allowances[msg.sender][spender] += addedValue;
         emit Approval(msg.sender, spender, _allowances[msg.sender][spender]);
         return true;
     }
 
-    function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {
+    function decreaseAllowance(address spender, uint256 subtractedValue)
+        public
+        returns (bool)
+    {
         uint256 currentAllowance = _allowances[msg.sender][spender];
-        require(currentAllowance >= subtractedValue, "ERC20: decreased allowance below zero");
+        require(
+            currentAllowance >= subtractedValue,
+            "ERC20: decreased allowance below zero"
+        );
         _allowances[msg.sender][spender] = currentAllowance - subtractedValue;
         emit Approval(msg.sender, spender, _allowances[msg.sender][spender]);
         return true;
@@ -265,6 +317,4 @@ contract WageMint {
     // Commission-related functions and other existing functions unchanged...
 
     // Commission-related functions
-
-    
 }
