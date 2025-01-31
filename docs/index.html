@@ -34,6 +34,10 @@
   <p id="balanceDisplay">Loading...</p>
   <button id="refreshBalanceButton">Refresh Balance</button>
 
+  <!-- 5) Add Token to MetaMask -->
+  <hr />
+  <button id="addTokenButton">Add Grens Token to MetaMask</button>
+
   <script>
     /************************************************************
      *  Contract Addresses / ABIs
@@ -73,6 +77,9 @@
       document.getElementById('checkNameButton').onclick           = checkName;
       document.getElementById('checkRegisteredNameButton').onclick = checkRegisteredName;
       document.getElementById('refreshBalanceButton').onclick      = refreshBalance;
+
+      // The new button => Add Token to MetaMask
+      document.getElementById('addTokenButton').onclick            = addTokenToMetamask;
     });
 
     /************************************************************
@@ -245,18 +252,47 @@
     }
 
     /************************************************************
+     *  4) Add Token to MetaMask
+     ************************************************************/
+    async function addTokenToMetamask() {
+      // If no injected provider, just do nothing
+      if (!window.ethereum) {
+        alert("MetaMask is not available.");
+        return;
+      }
+      try {
+        // For demonstration, symbol = 'GRENS'; decimals = 18, no image
+        const tokenSymbol = 'GRENS';
+        const tokenDecimals = 18;
+        const tokenImage = ''; // optional: link to an image
+
+        await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: GRENS_CONTRACT_ADDRESS,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage
+            },
+          },
+        });
+      } catch (addErr) {
+        console.error("addTokenToMetamask error => ", addErr);
+        alert("Could not add token to MetaMask.");
+      }
+    }
+
+    /************************************************************
      *  handleContractError => parse known revert messages
      ************************************************************/
     function handleContractError(err, elementId) {
       const statusEl = document.getElementById(elementId);
-      // We reduce the "Internal JSON-RPC error" to "Pass invalid, or name / address taken."
-      // But first let's see if any known substring is found:
-      let fallbackMsg = "Pass invalid, or name / address taken.";  // the simpler fallback
-
+      let fallbackMsg = "Pass invalid, or name / address taken.";
       const rawMsg = err.message || "";
       const msgLower = rawMsg.toLowerCase();
 
-      // Check for specific revert patterns:
       if (msgLower.includes("invalid gateway token")) {
         statusEl.textContent = "Error: Invalid gateway token.";
       } else if (msgLower.includes("name already in use")) {
@@ -264,7 +300,6 @@
       } else if (msgLower.includes("address already onboarded")) {
         statusEl.textContent = "Error: Address already onboarded!";
       } else {
-        // else just show the simpler fallback
         statusEl.textContent = fallbackMsg;
       }
     }
