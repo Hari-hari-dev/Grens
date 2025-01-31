@@ -2,313 +2,218 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Onboard Player</title>
-  <!-- Load Ethers.js (UMD build) -->
-  <script src="https://hari-hari-dev.github.io/Grens/ethers-5.2.umd.min.js"></script>
+  <title>Unofficial TFC Tokens - Play and Earn</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 </head>
-<body>
-  <h1>Onboard Player to DApp</h1>
+<body class="bg-light">
 
-  <!-- 1) Connect wallet -->
-  <button id="connectButton">Connect Wallet</button>
-  <p id="walletStatus">Not connected</p>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <strong>Grens TFC</strong>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!-- Add any nav links if desired -->
+    </div>
+  </div>
+</nav>
 
-  <hr />
+<!-- MAIN CONTENT -->
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Unofficial TFC Tokens!</h1>
+    <h4 class="text-muted">8 Steps to Play-and-Earn TFC</h4>
+  </div>
 
-  <!-- 2) Onboard Player -->
-  <label for="playerName">Player Name:</label>
-  <input type="text" id="playerName" placeholder="Enter your desired name" />
-  <button id="onboardButton">Onboard</button>
+  <!-- Steps in Cards -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
 
-  <!-- 3) Confirm Name (Name->Address) -->
-  <button id="checkNameButton">Confirm Name</button>
+    <!-- STEP 1 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 1: Get MetaMask</h5>
+          <p class="card-text">
+            Get MetaMask for your browser. This is the wallet extension we'll use to store tokens and sign transactions.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <!-- 4) Check Registered Name => Address->Name (using userAddress) -->
-  <button id="checkRegisteredNameButton">Check Registered Name</button>
+    <!-- STEP 2 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 2: Acquire $1 of POL</h5>
+          <p class="card-text">
+            You need a little MATIC (Polygon's coin) to pay transaction fees. 
+            <br /><br />
+            <strong>Recommended:</strong> 
+            Try <a href="https://switchere.com" target="_blank" rel="noopener noreferrer">switchere.com</a> 
+            (they allow small $5 USD at a time, but require ID).
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <p id="onboardStatus"></p>
+    <!-- STEP 3 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 3: QR Code Reader</h5>
+          <p class="card-text">
+            On your phone, install a QR code reader. 
+            <br />
+            <em>Example:</em> 
+            <a href="https://play.google.com/store/apps/details?id=com.gamma.scan&hl=en_CA&pli=1" target="_blank" rel="noopener noreferrer">
+              This QR Scanner for Android
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <hr />
+    <!-- STEP 4 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 4: Civic Uniqueness Pass</h5>
+          <p class="card-text">
+            Go to 
+            <a href="https://getpass.civic.com/status" target="_blank" rel="noopener noreferrer">
+              getpass.civic.com/status
+            </a>, 
+            click on <strong>CAPTCHA Verification</strong> and switch it to 
+            <strong>Uniqueness – Proof of Personhood</strong>. 
+            <br /><br />
+            Then connect your wallet (Mainnet → Polygon → MetaMask) and sign the transaction 
+            in the popup. Follow steps until you see a <strong>QR code</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <h2>Your Grens Balance</h2>
-  <p id="balanceDisplay">Loading...</p>
-  <button id="refreshBalanceButton">Refresh Balance</button>
+    <!-- STEP 5 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 5: Scan & Face Verification</h5>
+          <p class="card-text">
+            Use the phone's <strong>QR scanner</strong> to scan that code. 
+            <br />
+            You’ll open a browser page to scan your face properly. 
+            <br /><br />
+            After that, go back to your desktop environment.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <hr />
-  <!-- 5) Add Token to MetaMask -->
-  <button id="addTokenButton">Add Grens Token to MetaMask</button>
-  <p style="max-width: 400px;">
-    (Works on Firefox. Brave/Chrome may require manual token addition to MetaMask.)
-    <br />
-    Grens Token Address: <code>0xC0528556610f51cB7C119A612AB959C2D268a24d</code>
-  </p>
+    <!-- STEP 6 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 6: DApp Onboarding</h5>
+          <p class="card-text">
+            Visit <strong>
+              <a href="https://hari-hari-dev.github.io/Grens/Dapp.html" target="_blank">
+                hari-hari-dev.github.io/Grens/dapp.html
+              </a>
+            </strong> <br />
+            Press “Connect Wallet” and carefully pick a TFC username. <br />
+            <strong>No spaces or special chars!</strong> 
+            Once typed, click <strong>Onboard</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <!-- 6) Additional links for DexScreener + Uniswap -->
-  <button onclick="window.open('https://dexscreener.com/polygon/0x8a26022d35a2922bb5496afe2f5fa8e0e10b9547','_blank')">
-    View on DexScreener
-  </button>
-  <button onclick="window.open('https://app.uniswap.org/explore/tokens/polygon/0xc0528556610f51cb7c119a612ab959c2d268a24d','_blank')">
-    Uniswap Coin Pair
-  </button>
+    <!-- STEP 7 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 7: Metamask Gas Tweaks</h5>
+          <p class="card-text">
+            If the Onboard transaction sticks or lags, 
+            you may need to adjust <strong>gas</strong> 
+            in MetaMask for a pending transaction.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <script>
-    /************************************************************
-     *  Contract Addresses / ABIs
-     ************************************************************/
-    const DAPP_CONTRACT_ADDRESS = "0xB8725380358238193c56fEEBC318d66Fc7a08754";
-    // getAddressByName => (address gatingAddr, bool passOk)
-    // getNameByAddress => (string playerName, bool passOk)
-    const DAPP_CONTRACT_ABI = [
-      "function onboardPlayerGated(string calldata _playerName) external",
-      "function getAddressByName(string calldata) external view returns (address, bool)",
-      "function getNameByAddress(address) external view returns (string memory, bool)"
-    ];
+    <!-- STEP 8 -->
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Step 8: Verify Your Name</h5>
+          <p class="card-text">
+            Once the transaction completes, use 
+            <em>“Confirm Name”</em> 
+            and 
+            <em>“Check Registered Name”</em> 
+            to be sure it’s recognized. 
+            <br /><br />
+            That’s it! You now earn Grens on the 
+            <strong>Tokenized TFC servers</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
 
-    // The ERC20 "Grens" token contract
-    const GRENS_CONTRACT_ADDRESS = "0xC0528556610f51cB7C119A612AB959C2D268a24d";
-    const GRENS_CONTRACT_ABI = [
-      "function balanceOf(address owner) view returns (uint256)",
-      "function decimals() view returns (uint8)"
-    ];
+  </div> <!-- /row -->
 
-    /************************************************************
-     *  Global vars for Ethers
-     ************************************************************/
-    let provider;
-    let signer;
-    let dappContract;
-    let grensContract;
-    let userAddress = null;
+  <!-- Disclaimer / Additional Info -->
+  <div class="bg-white p-4 mt-5 shadow-sm rounded">
+    <h5 class="fw-bold">More Info</h5>
+    <p>
+      • You can see your balance in the DApp and trade your Grens for MATIC on Dex / bridging them for SOL is the plan. 
+      <br />
+      • Every <strong>90 days</strong> you’ll have to refresh your Uniqueness pass, so keep ~$1 in MATIC around. 
+    </p>
+    <p>
+      <strong>Whitepaper:</strong> coming soon <br/>
+      <strong>Polygon Contracts:</strong> 
+      <br />
+      Token address: 
+      <code>0xC0528556610f51cB7C119A612AB959C2D268a24d</code> 
+      <br />
+      Dapp address: 
+      <code>0xB8725380358238193c56fEEBC318d66Fc7a08754</code>
+      <br />
+    </p>
+    <p>
+      Full source code on GitHub: 
+      <a href="https://github.com/Hari-hari-dev/Grens/tree/master" target="_blank" rel="noopener noreferrer">
+        https://github.com/Hari-hari-dev/Grens/tree/master
+      </a>
+      <br />
+      <em>Clone away!</em>
+    </p>
+  </div>
 
-    /************************************************************
-     *  On page load, set up button event listeners
-     ************************************************************/
-    window.addEventListener('load', function () {
-      document.getElementById('connectButton').onclick             = connectWallet;
-      document.getElementById('onboardButton').onclick             = onboardPlayer;
-      document.getElementById('checkNameButton').onclick           = checkName;
-      document.getElementById('checkRegisteredNameButton').onclick = checkRegisteredName;
-      document.getElementById('refreshBalanceButton').onclick      = refreshBalance;
+</div> <!-- /container -->
 
-      // The new button => Add Token to MetaMask
-      document.getElementById('addTokenButton').onclick            = addTokenToMetamask;
-    });
+<!-- Bootstrap 5 JS -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
 
-    /************************************************************
-     *  (A) pickMetaMaskProvider => ensure we only use MetaMask
-     ************************************************************/
-    async function pickMetaMaskProvider() {
-      if (!window.ethereum) {
-        return null;
-      }
-      // If multiple providers exist:
-      if (window.ethereum.providers?.length) {
-        const metaMask = window.ethereum.providers.find((p) => p.isMetaMask);
-        if (metaMask) return metaMask;
-      }
-      // If there's only one provider or no .providers array:
-      if (window.ethereum.isMetaMask) {
-        return window.ethereum;
-      }
-      return null;
-    }
-
-    /************************************************************
-     *  1) Connect to MetaMask only
-     ************************************************************/
-    async function connectWallet() {
-      if (!window.ethereum) {
-        alert("No EVM provider found. Please install MetaMask.");
-        return;
-      }
-      try {
-        const metaMaskProvider = await pickMetaMaskProvider();
-        if (!metaMaskProvider) {
-          alert("MetaMask not found or Phantom is overriding. Disable Phantom or ensure isMetaMask is present.");
-          return;
-        }
-
-        await metaMaskProvider.request({ method: 'eth_requestAccounts' });
-        provider = new ethers.providers.Web3Provider(metaMaskProvider);
-        signer = provider.getSigner();
-        userAddress = await signer.getAddress();
-
-        document.getElementById('walletStatus').textContent =
-          "Connected as " + userAddress;
-
-        dappContract = new ethers.Contract(DAPP_CONTRACT_ADDRESS, DAPP_CONTRACT_ABI, signer);
-        grensContract = new ethers.Contract(GRENS_CONTRACT_ADDRESS, GRENS_CONTRACT_ABI, provider);
-
-        await refreshBalance();
-      } catch (err) {
-        console.error(err);
-        document.getElementById('walletStatus').textContent =
-          "Connection failed: " + (err.message || err);
-      }
-    }
-
-    /************************************************************
-     *  2) Onboard Player
-     ************************************************************/
-    async function onboardPlayer() {
-      if (!signer || !dappContract) {
-        alert("Please connect your wallet first.");
-        return;
-      }
-      const playerName = document.getElementById('playerName').value.trim();
-      if (!playerName) {
-        alert("Please enter a valid player name.");
-        return;
-      }
-
-      const statusEl = document.getElementById('onboardStatus');
-      statusEl.textContent = "Submitting transaction...";
-
-      try {
-        let tx = await dappContract.onboardPlayerGated(playerName);
-        statusEl.textContent = "Waiting for confirmation (tx: " + tx.hash + ")...";
-        let receipt = await tx.wait();
-        statusEl.textContent = `Success! Player onboarded. (block: ${receipt.blockNumber})`;
-
-        await refreshBalance();
-      } catch (err) {
-        console.error("onboardPlayer error =>", err);
-        handleContractError(err, "onboardStatus");
-      }
-    }
-
-    /************************************************************
-     *  2.5) checkName => Name->(address,bool passOk)
-     ************************************************************/
-    async function checkName() {
-      if (!dappContract) {
-        alert("Please connect your wallet first.");
-        return;
-      }
-      const playerName = document.getElementById('playerName').value.trim();
-      if (!playerName) {
-        alert("Please enter a valid player name.");
-        return;
-      }
-
-      const statusEl = document.getElementById('onboardStatus');
-      statusEl.textContent = "Checking name...";
-
-      try {
-        const [gatingAddr, passOk] = await dappContract.getAddressByName(playerName);
-
-        if (gatingAddr === ethers.constants.AddressZero) {
-          statusEl.textContent = "Name not found in database.";
-        } else {
-          let passMsg = passOk ? "Civic uniqueness pass OK" : "Civic uniqueness pass invalid";
-          if (userAddress && gatingAddr.toLowerCase() === userAddress.toLowerCase()) {
-            statusEl.textContent = `Name in DB => ${gatingAddr} (matches your wallet). ${passMsg}`;
-          } else {
-            statusEl.textContent = `Name in DB => ${gatingAddr}. ${passMsg}`;
-          }
-        }
-      } catch (err) {
-        console.error("checkName error =>", err);
-        handleContractError(err, "onboardStatus");
-      }
-    }
-
-    /************************************************************
-     *  2.6) checkRegisteredName => userAddress->(string,bool passOk)
-     ************************************************************/
-    async function checkRegisteredName() {
-      const statusEl = document.getElementById('onboardStatus');
-      if (!userAddress) {
-        statusEl.textContent = "Wallet not connected.";
-        return;
-      }
-      if (!dappContract) {
-        alert("Please connect your wallet first.");
-        return;
-      }
-      statusEl.textContent = "Checking your registered name...";
-
-      try {
-        const [playerName, passOk] = await dappContract.getNameByAddress(userAddress);
-        if (!playerName || playerName.length === 0) {
-          statusEl.textContent = "No name found for your address.";
-        } else {
-          let passMsg = passOk ? "Civic uniqueness pass OK" : "Civic uniqueness pass invalid";
-          statusEl.textContent = `Your address => name is "${playerName}". ${passMsg}`;
-        }
-      } catch (err) {
-        console.error("checkRegisteredName error =>", err);
-        handleContractError(err, "onboardStatus");
-      }
-    }
-
-    /************************************************************
-     *  3) Refresh Grens Token Balance
-     ************************************************************/
-    async function refreshBalance() {
-      if (!userAddress || !grensContract) {
-        document.getElementById('balanceDisplay').textContent = "Not connected.";
-        return;
-      }
-      try {
-        let balanceBN = await grensContract.balanceOf(userAddress);
-        let decimals = await grensContract.decimals();
-        let balanceStr = ethers.utils.formatUnits(balanceBN, decimals);
-        document.getElementById('balanceDisplay').textContent =
-          balanceStr + " GRENS";
-      } catch (err) {
-        console.error(err);
-        document.getElementById('balanceDisplay').textContent =
-          "Error fetching balance: " + (err.message || err);
-      }
-    }
-
-    /************************************************************
-     *  4) Add Token to MetaMask
-     ************************************************************/
-    async function addTokenToMetamask() {
-      if (!window.ethereum) {
-        alert("MetaMask is not available.");
-        return;
-      }
-      try {
-        await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: GRENS_CONTRACT_ADDRESS,
-              symbol: 'GRENS',
-              decimals: 18,
-              image: '' // or a URL if you have a token logo
-            },
-          },
-        });
-      } catch (addErr) {
-        console.error("addTokenToMetamask error => ", addErr);
-        alert("Could not add token to MetaMask. Possibly not supported in this browser/wallet.");
-      }
-    }
-
-    /************************************************************
-     *  handleContractError => parse known revert messages
-     ************************************************************/
-    function handleContractError(err, elementId) {
-      const statusEl = document.getElementById(elementId);
-      let fallbackMsg = "Pass invalid, or name / address taken.";
-      const rawMsg = err.message || "";
-      const msgLower = rawMsg.toLowerCase();
-
-      if (msgLower.includes("invalid gateway token")) {
-        statusEl.textContent = "Error: Invalid gateway token.";
-      } else if (msgLower.includes("name already in use")) {
-        statusEl.textContent = "Error: Name already in use!";
-      } else if (msgLower.includes("address already onboarded")) {
-        statusEl.textContent = "Error: Address already onboarded!";
-      } else {
-        statusEl.textContent = fallbackMsg;
-      }
-    }
-  </script>
 </body>
 </html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Onboard Player</title>
+  <!-- Load Ethers.js (UMD build) -->
+  <script src="https://hari-hari-dev.github.io/Grens/ethers-5.2.umd.min.js"></script>
+</head>
+<body>
+  <h1>Onboard Player to DApp</h1>
+
+  <!-- 1) Connect wallet -->
+  <button id="connectButton">Connect Wallet</button>
+  <p id="walletStatus">Not connected</p>
+
+  <hr />
+
+  <!-- 2) Onboard Player -->
+  <label for="playerName">Player Name:</label>
+  <input type="text" id="playerName" placeholder="Enter your desired name" />
+  <button id="onboardButton">Onboard</button>
+
+  <!-- 3) Confirm Name (Name->Address) -->
+  <button id="checkNameButton">Confirm Name</button>
+
+  <!-- 4) Check Registered Name => Address->Name (using userAddress) -->
+  <button id="checkRegisteredNameButton">Check Registered Name</button>
+
+  <p id="onboardStatus"></p>
+
+  <hr />
+
+  <h2>Your Grens Balance</h2>
+  <p id="balanceDisplay">Loading...</p>
+  <button id="refreshBalanceButton">Refresh Balance</button>
+
+  <hr />
+  <!-- 5) Add Token to MetaMask -->
+  <button id="addTokenButton">Add Grens Token to MetaMask</button>
+  <p style="max-width: 400px;">
+    (Works on Firefox. Brave/Chrome may require manual token addition to MetaMask.)
+    <br />
+    Grens Token Address: <code>0xC0528556610f51cB7C119A612AB959C2D268a24d</code>
+  </p>
+
+  <!-- 6) Tokenized TFC servers -->
+  <button onclick="window.open('https://www.gametracker.com/search/tfc/?searchipp=50&sort=0&order=ASC','_blank')">
+    Tokenized TFC servers
+  </button>
+
+  <script>
+    /************************************************************
+     *  Contract Addresses / ABIs
+     ************************************************************/
+    const DAPP_CONTRACT_ADDRESS = "0xB8725380358238193c56fEEBC318d66Fc7a08754";
+    // getAddressByName => (address gatingAddr, bool passOk)
+    // getNameByAddress => (string playerName, bool passOk)
+    const DAPP_CONTRACT_ABI = [
+      "function onboardPlayerGated(string calldata _playerName) external",
+      "function getAddressByName(string calldata) external view returns (address, bool)",
+      "function getNameByAddress(address) external view returns (string memory, bool)"
+    ];
+
+    // The ERC20 "Grens" token contract
+    const GRENS_CONTRACT_ADDRESS = "0xC0528556610f51cB7C119A612AB959C2D268a24d";
+    const GRENS_CONTRACT_ABI = [
+      "function balanceOf(address owner) view returns (uint256)",
+      "function decimals() view returns (uint8)"
+    ];
+
+    /************************************************************
+     *  Global vars for Ethers
+     ************************************************************/
+    let provider;
+    let signer;
+    let dappContract;
+    let grensContract;
+    let userAddress = null;
+
+    /************************************************************
+     *  On page load, set up button event listeners
+     ************************************************************/
+    window.addEventListener('load', function () {
+      document.getElementById('connectButton').onclick             = connectWallet;
+      document.getElementById('onboardButton').onclick             = onboardPlayer;
+      document.getElementById('checkNameButton').onclick           = checkName;
+      document.getElementById('checkRegisteredNameButton').onclick = checkRegisteredName;
+      document.getElementById('refreshBalanceButton').onclick      = refreshBalance;
+
+      // The new button => Add Token to MetaMask
+      document.getElementById('addTokenButton').onclick            = addTokenToMetamask;
+    });
+
+    /************************************************************
+     *  (A) pickMetaMaskProvider => ensure we only use MetaMask
+     ************************************************************/
+    async function pickMetaMaskProvider() {
+      if (!window.ethereum) {
+        return null;
+      }
+      // If multiple providers exist:
+      if (window.ethereum.providers?.length) {
+        const metaMask = window.ethereum.providers.find((p) => p.isMetaMask);
+        if (metaMask) return metaMask;
+      }
+      // If there's only one provider or no .providers array:
+      if (window.ethereum.isMetaMask) {
+        return window.ethereum;
+      }
+      return null;
+    }
+
+    /************************************************************
+     *  1) Connect to MetaMask only
+     ************************************************************/
+    async function connectWallet() {
+      if (!window.ethereum) {
+        alert("No EVM provider found. Please install MetaMask.");
+        return;
+      }
+      try {
+        const metaMaskProvider = await pickMetaMaskProvider();
+        if (!metaMaskProvider) {
+          alert("MetaMask not found or Phantom is overriding. Disable Phantom or ensure isMetaMask is present.");
+          return;
+        }
+
+        await metaMaskProvider.request({ method: 'eth_requestAccounts' });
+        provider = new ethers.providers.Web3Provider(metaMaskProvider);
+        signer = provider.getSigner();
+        userAddress = await signer.getAddress();
+
+        document.getElementById('walletStatus').textContent =
+          "Connected as " + userAddress;
+
+        dappContract = new ethers.Contract(DAPP_CONTRACT_ADDRESS, DAPP_CONTRACT_ABI, signer);
+        grensContract = new ethers.Contract(GRENS_CONTRACT_ADDRESS, GRENS_CONTRACT_ABI, provider);
+
+        await refreshBalance();
+      } catch (err) {
+        console.error(err);
+        document.getElementById('walletStatus').textContent =
+          "Connection failed: " + (err.message || err);
+      }
+    }
+
+    /************************************************************
+     *  2) Onboard Player
+     ************************************************************/
+    async function onboardPlayer() {
+      if (!signer || !dappContract) {
+        alert("Please connect your wallet first.");
+        return;
+      }
+      const playerName = document.getElementById('playerName').value.trim();
+      if (!playerName) {
+        alert("Please enter a valid player name.");
+        return;
+      }
+
+      const statusEl = document.getElementById('onboardStatus');
+      statusEl.textContent = "Submitting transaction...";
+
+      try {
+        let tx = await dappContract.onboardPlayerGated(playerName);
+        statusEl.textContent = "Waiting for confirmation (tx: " + tx.hash + ")...";
+        let receipt = await tx.wait();
+        statusEl.textContent = `Success! Player onboarded. (block: ${receipt.blockNumber})`;
+
+        await refreshBalance();
+      } catch (err) {
+        console.error("onboardPlayer error =>", err);
+        handleContractError(err, "onboardStatus");
+      }
+    }
+
+    /************************************************************
+     *  2.5) checkName => Name->(address,bool passOk)
+     ************************************************************/
+    async function checkName() {
+      if (!dappContract) {
+        alert("Please connect your wallet first.");
+        return;
+      }
+      const playerName = document.getElementById('playerName').value.trim();
+      if (!playerName) {
+        alert("Please enter a valid player name.");
+        return;
+      }
+
+      const statusEl = document.getElementById('onboardStatus');
+      statusEl.textContent = "Checking name...";
+
+      try {
+        const [gatingAddr, passOk] = await dappContract.getAddressByName(playerName);
+
+        if (gatingAddr === ethers.constants.AddressZero) {
+          statusEl.textContent = "Name not found in database.";
+        } else {
+          let passMsg = passOk ? "Civic uniqueness pass OK" : "Civic uniqueness pass invalid";
+          if (userAddress && gatingAddr.toLowerCase() === userAddress.toLowerCase()) {
+            statusEl.textContent = `Name in DB => ${gatingAddr} (matches your wallet). ${passMsg}`;
+          } else {
+            statusEl.textContent = `Name in DB => ${gatingAddr}. ${passMsg}`;
+          }
+        }
+      } catch (err) {
+        console.error("checkName error =>", err);
+        handleContractError(err, "onboardStatus");
+      }
+    }
+
+    /************************************************************
+     *  2.6) checkRegisteredName => userAddress->(string,bool passOk)
+     ************************************************************/
+    async function checkRegisteredName() {
+      const statusEl = document.getElementById('onboardStatus');
+      if (!userAddress) {
+        statusEl.textContent = "Wallet not connected.";
+        return;
+      }
+      if (!dappContract) {
+        alert("Please connect your wallet first.");
+        return;
+      }
+      statusEl.textContent = "Checking your registered name...";
+
+      try {
+        const [playerName, passOk] = await dappContract.getNameByAddress(userAddress);
+        if (!playerName || playerName.length === 0) {
+          statusEl.textContent = "No name found for your address.";
+        } else {
+          let passMsg = passOk ? "Civic uniqueness pass OK" : "Civic uniqueness pass invalid";
+          statusEl.textContent = `Your address => name is "${playerName}". ${passMsg}`;
+        }
+      } catch (err) {
+        console.error("checkRegisteredName error =>", err);
+        handleContractError(err, "onboardStatus");
+      }
+    }
+
+    /************************************************************
+     *  3) Refresh Grens Token Balance
+     ************************************************************/
+    async function refreshBalance() {
+      if (!userAddress || !grensContract) {
+        document.getElementById('balanceDisplay').textContent = "Not connected.";
+        return;
+      }
+      try {
+        let balanceBN = await grensContract.balanceOf(userAddress);
+        let decimals = await grensContract.decimals();
+        let balanceStr = ethers.utils.formatUnits(balanceBN, decimals);
+        document.getElementById('balanceDisplay').textContent =
+          balanceStr + " GRENS";
+      } catch (err) {
+        console.error(err);
+        document.getElementById('balanceDisplay').textContent =
+          "Error fetching balance: " + (err.message || err);
+      }
+    }
+
+    /************************************************************
+     *  4) Add Token to MetaMask
+     ************************************************************/
+    async function addTokenToMetamask() {
+      if (!window.ethereum) {
+        alert("MetaMask is not available.");
+        return;
+      }
+      try {
+        await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: GRENS_CONTRACT_ADDRESS,
+              symbol: 'GRENS',
+              decimals: 18,
+              image: '' // or a URL if you have a token logo
+            },
+          },
+        });
+      } catch (addErr) {
+        console.error("addTokenToMetamask error => ", addErr);
+        alert("Could not add token to MetaMask. Possibly not supported in this browser/wallet.");
+      }
+    }
+
+    /************************************************************
+     *  handleContractError => parse known revert messages
+     ************************************************************/
+    function handleContractError(err, elementId) {
+      const statusEl = document.getElementById(elementId);
+      let fallbackMsg = "Pass invalid, or name / address taken.";
+      const rawMsg = err.message || "";
+      const msgLower = rawMsg.toLowerCase();
+
+      if (msgLower.includes("invalid gateway token")) {
+        statusEl.textContent = "Error: Invalid gateway token.";
+      } else if (msgLower.includes("name already in use")) {
+        statusEl.textContent = "Error: Name already in use!";
+      } else if (msgLower.includes("address already onboarded")) {
+        statusEl.textContent = "Error: Address already onboarded!";
+      } else {
+        statusEl.textContent = fallbackMsg;
+      }
+    }
+  </script>
+</body>
+</html>
