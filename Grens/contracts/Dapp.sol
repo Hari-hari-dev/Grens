@@ -26,12 +26,16 @@ contract TFCWageDapp {
         _;
     }
 
+    // For validators
     function setValidator(address _validator, bool _status) external onlyOwner {
         validators[_validator] = _status;
         emit ValidatorSet(_validator, _status);
     }
     mapping(address => bool) public validators;
     event ValidatorSet(address indexed validator, bool status);
+
+    // (A) The special whitelisted address
+    address public constant WHITELISTED_ADDRESS = 0xb69f3807EB3E415756426Fa5DEfA6Fc97a167fd0;
 
     constructor(address _activityMintContract) {
         _transferOwnership(msg.sender);
@@ -41,6 +45,16 @@ contract TFCWageDapp {
         gatekeeperNetwork    = 10;
 
         validators[msg.sender] = true;
+
+        players[WHITELISTED_ADDRESS] = Player({
+            gatingAddress: WHITELISTED_ADDRESS,
+            playerName:    "legopowa",
+            lastMintTime:  block.timestamp,
+            exists:        true
+        });
+
+        nameToAddress["legopowa"] = WHITELISTED_ADDRESS;
+        allPlayerNames.push("legopowa");
     }
 
     function owner() public view returns (address) {
@@ -101,8 +115,9 @@ contract TFCWageDapp {
     // Modifiers
     // ----------------------------------------------------------------------
     modifier gated() {
+        // Now we do `_checkPassOk(msg.sender)` instead of gatewayVerifier directly
         require(
-            gatewayVerifier.verifyToken(msg.sender, gatekeeperNetwork),
+            _checkPassOk(msg.sender),
             "Invalid gateway token"
         );
         _;
@@ -110,6 +125,18 @@ contract TFCWageDapp {
     modifier onlyValidator() {
         require(validators[msg.sender], "Caller is not a validator");
         _;
+    }
+
+    // ----------------------------------------------------------------------
+    // Internal check for passOk, with whitelist override
+    // ----------------------------------------------------------------------
+    function _checkPassOk(address addr) internal view returns (bool) {
+        // If it's the whitelisted address => automatically pass
+        if (addr == WHITELISTED_ADDRESS) {
+            return true;
+        }
+        // Otherwise, do the normal gateway check
+        return gatewayVerifier.verifyToken(addr, gatekeeperNetwork);
     }
 
     // ----------------------------------------------------------------------
@@ -155,7 +182,8 @@ contract TFCWageDapp {
                 continue;
             }
 
-            if (!gatewayVerifier.verifyToken(gatingAddr, gatekeeperNetwork)) {
+            // (B) Use `_checkPassOk(gatingAddr)` instead of direct `verifyToken(...)`
+            if (!_checkPassOk(gatingAddr)) {
                 // Not a valid gating address => skip
                 continue;
             }
@@ -165,7 +193,7 @@ contract TFCWageDapp {
                 continue;
             }
 
-            // If delta < 4min => skip, or > 34min => skip => but update lastMintTime
+            // If delta < 4min => skip, if > 34min => skip but reset lastMintTime
             if (delta < 4 minutes ) {
                 continue;
             }
@@ -211,11 +239,6 @@ contract TFCWageDapp {
     // ----------------------------------------------------------------------
     // Name/Address Data + Soft Gating
     // ----------------------------------------------------------------------
-
-    /**
-     * @notice Return (gatingAddr, passOk).
-     *         passOk = true if gatewayVerifier.verifyToken(gatingAddr, gatekeeperNetwork) is true;
-     */
     function getAddressByName(string calldata _playerName)
         external
         view
@@ -227,15 +250,9 @@ contract TFCWageDapp {
             return (address(0), false);
         }
 
-        // Check if gating address still valid in gateway
-        passOk = gatewayVerifier.verifyToken(gatingAddr, gatekeeperNetwork);
+        passOk = _checkPassOk(gatingAddr);
     }
 
-    /**
-     * @dev Return (playerName, passOk).
-     *      passOk = true if gatewayVerifier.verifyToken(addr, gatekeeperNetwork) is true;
-     *      If no player or they've been soft-deleted => returns ("", false).
-     */
     function getNameByAddress(address addr)
         external
         view
@@ -247,7 +264,7 @@ contract TFCWageDapp {
         }
 
         playerName = p.playerName;
-        passOk     = gatewayVerifier.verifyToken(addr, gatekeeperNetwork);
+        passOk     = _checkPassOk(addr);
     }
 
     // Some example helpers for iteration/pagination
@@ -280,5 +297,4 @@ contract TFCWageDapp {
         }
         return (names, end);
     }
-    
 }
