@@ -34,9 +34,22 @@
   <p id="balanceDisplay">Loading...</p>
   <button id="refreshBalanceButton">Refresh Balance</button>
 
-  <!-- 5) Add Token to MetaMask -->
   <hr />
+  <!-- 5) Add Token to MetaMask -->
   <button id="addTokenButton">Add Grens Token to MetaMask</button>
+  <p style="max-width: 400px;">
+    (Works on Firefox. Brave/Chrome may require manual token addition to MetaMask.)
+    <br />
+    Grens Token Address: <code>0xC0528556610f51cB7C119A612AB959C2D268a24d</code>
+  </p>
+
+  <!-- 6) Additional links for DexScreener + Uniswap -->
+  <button onclick="window.open('https://dexscreener.com/polygon/0x8a26022d35a2922bb5496afe2f5fa8e0e10b9547','_blank')">
+    View on DexScreener
+  </button>
+  <button onclick="window.open('https://app.uniswap.org/explore/tokens/polygon/0xc0528556610f51cb7c119a612ab959c2d268a24d','_blank')">
+    Uniswap Coin Pair
+  </button>
 
   <script>
     /************************************************************
@@ -53,7 +66,6 @@
 
     // The ERC20 "Grens" token contract
     const GRENS_CONTRACT_ADDRESS = "0xC0528556610f51cB7C119A612AB959C2D268a24d";
-    // Standard ERC20 ABI subset for balanceOf & decimals
     const GRENS_CONTRACT_ABI = [
       "function balanceOf(address owner) view returns (uint256)",
       "function decimals() view returns (uint8)"
@@ -255,32 +267,26 @@
      *  4) Add Token to MetaMask
      ************************************************************/
     async function addTokenToMetamask() {
-      // If no injected provider, just do nothing
       if (!window.ethereum) {
         alert("MetaMask is not available.");
         return;
       }
       try {
-        // For demonstration, symbol = 'GRENS'; decimals = 18, no image
-        const tokenSymbol = 'GRENS';
-        const tokenDecimals = 18;
-        const tokenImage = ''; // optional: link to an image
-
         await window.ethereum.request({
           method: 'wallet_watchAsset',
           params: {
             type: 'ERC20',
             options: {
               address: GRENS_CONTRACT_ADDRESS,
-              symbol: tokenSymbol,
-              decimals: tokenDecimals,
-              image: tokenImage
+              symbol: 'GRENS',
+              decimals: 18,
+              image: '' // or a URL if you have a token logo
             },
           },
         });
       } catch (addErr) {
         console.error("addTokenToMetamask error => ", addErr);
-        alert("Could not add token to MetaMask.");
+        alert("Could not add token to MetaMask. Possibly not supported in this browser/wallet.");
       }
     }
 
