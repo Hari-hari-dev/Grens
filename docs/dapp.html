@@ -48,6 +48,17 @@
     Tokenized TFC servers
   </button>
 
+  <!-- 7) Uniswap link for Grens/Pol -->
+  <hr />
+  <button onclick="window.open('https://app.uniswap.org/explore/tokens/polygon/0xc0528556610f51cb7c119a612ab959c2d268a24d','_blank')">
+    Uniswap Grens / Pol
+  </button>
+
+  <!-- 8) DexScreener link for Grens/Pol -->
+  <button onclick="window.open('https://dexscreener.com/polygon/0x8a26022d35a2922bb5496afe2f5fa8e0e10b9547','_blank')">
+    DexScreener Grens / Pol
+  </button>
+
   <script>
     /************************************************************
      *  Contract Addresses / ABIs
@@ -86,8 +97,6 @@
       document.getElementById('checkNameButton').onclick           = checkName;
       document.getElementById('checkRegisteredNameButton').onclick = checkRegisteredName;
       document.getElementById('refreshBalanceButton').onclick      = refreshBalance;
-
-      // The new button => Add Token to MetaMask
       document.getElementById('addTokenButton').onclick            = addTokenToMetamask;
     });
 
